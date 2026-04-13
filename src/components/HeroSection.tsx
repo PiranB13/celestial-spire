@@ -66,14 +66,14 @@ export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const scrollProgress = useScrollProgress(sectionRef);
 
-  // Brain: fully visible at 0, fades/scales out by 0.5
-  const brainOpacity = Math.max(0, 1 - scrollProgress * 2.5);
-  const brainScale = 1 + scrollProgress * 0.3;
-  const brainRotate = scrollProgress * 15;
-  const brainBlur = scrollProgress * 8;
+  // Brain: fully visible at 0, fades out quickly
+  const brainOpacity = Math.max(0, 1 - scrollProgress * 5);
+  const brainScale = 1 + scrollProgress * 0.5;
+  const brainRotate = scrollProgress * 25;
+  const brainBlur = scrollProgress * 16;
 
-  // Data: invisible at 0, fades/scales in from 0.3 to 0.7
-  const dataProgress = Math.max(0, Math.min(1, (scrollProgress - 0.25) / 0.5));
+  // Data: fades in early and fast
+  const dataProgress = Math.max(0, Math.min(1, (scrollProgress - 0.08) / 0.2));
   const dataOpacity = dataProgress;
   const dataScale = 0.7 + dataProgress * 0.3;
   const dataRotate = (1 - dataProgress) * -20;
