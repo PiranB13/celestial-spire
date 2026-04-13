@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Check, Rocket, Orbit, Shield } from 'lucide-react';
+import { StaggerContainer, RevealItem, scaleIn } from './ScrollReveal';
 
 const tiers = [
   {
@@ -61,30 +62,27 @@ export default function PricingSection() {
     <section id="pricing" className="relative py-24 lg:py-32">
       <div className="absolute inset-0 bg-grid opacity-10" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <span className="font-mono-tech text-xs text-primary tracking-widest uppercase">// Pricing</span>
-          <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
-            Mission <span className="text-gradient">Tiers</span>
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Choose the mission package that matches your ambition. All tiers include AI-powered development.
-          </p>
-        </motion.div>
+        <StaggerContainer className="text-center mb-16">
+          <RevealItem>
+            <span className="font-mono-tech text-xs text-primary tracking-widest uppercase">// Pricing</span>
+          </RevealItem>
+          <RevealItem>
+            <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
+              Mission <span className="text-gradient">Tiers</span>
+            </h2>
+          </RevealItem>
+          <RevealItem>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Choose the mission package that matches your ambition. All tiers include AI-powered development.
+            </p>
+          </RevealItem>
+        </StaggerContainer>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
-          {tiers.map((tier, i) => (
+        <StaggerContainer className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start" staggerDelay={0.2}>
+          {tiers.map((tier) => (
             <motion.div
               key={tier.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
+              variants={scaleIn}
               className={`relative glass rounded-2xl p-8 ${
                 tier.popular ? 'glow-border border-primary/40 md:-mt-4 md:mb-[-16px]' : 'border border-border/50'
               } transition-all duration-500 hover:glow-border`}
@@ -94,23 +92,19 @@ export default function PricingSection() {
                   MOST POPULAR
                 </div>
               )}
-
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
                   <tier.icon className="w-5 h-5 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground">{tier.name}</h3>
               </div>
-
               <div className="mb-4">
                 <span className="text-3xl font-bold text-foreground">
                   {tier.price !== 'Custom' ? '£' : ''}{tier.price}
                 </span>
                 {tier.price !== 'Custom' && <span className="text-sm text-muted-foreground ml-1">starting</span>}
               </div>
-
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">{tier.description}</p>
-
               <ul className="space-y-3 mb-8">
                 {tier.features.map((f) => (
                   <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -119,7 +113,6 @@ export default function PricingSection() {
                   </li>
                 ))}
               </ul>
-
               <a
                 href="#contact"
                 className={`block text-center py-3 rounded-lg text-sm font-semibold transition-all duration-300 ${
@@ -132,7 +125,7 @@ export default function PricingSection() {
               </a>
             </motion.div>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
