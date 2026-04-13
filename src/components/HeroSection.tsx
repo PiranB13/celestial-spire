@@ -85,7 +85,7 @@ export default function HeroSection() {
   return (
     <section ref={sectionRef} className="relative min-h-[140vh] overflow-hidden">
       {/* Sticky container for the hero content */}
-      <div className="sticky top-0 min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="sticky top-0 min-h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* Background layers */}
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="absolute inset-0 scanline pointer-events-none" />
@@ -94,9 +94,9 @@ export default function HeroSection() {
         {/* Radial gradient overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,hsl(var(--background))_70%)]" />
 
-        {/* Morphing visual - Brain → Data Disk */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] lg:w-[480px] lg:h-[480px]">
+        {/* Morphing visual - Brain → Microchip (above text) */}
+        <div className="relative z-10 mt-20 mb-4 flex items-center justify-center">
+          <div className="relative w-[180px] h-[180px] sm:w-[240px] sm:h-[240px] lg:w-[320px] lg:h-[320px]">
             {/* Ambient glow behind the morph */}
             <div
               className="absolute inset-[-30%] rounded-full"
@@ -120,7 +120,7 @@ export default function HeroSection() {
               }}
             />
 
-            {/* Data disk image */}
+            {/* Microchip image */}
             <img
               src={heroData}
               alt=""
@@ -139,7 +139,7 @@ export default function HeroSection() {
         </div>
 
         {/* Hero text content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
