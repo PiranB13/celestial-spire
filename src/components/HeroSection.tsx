@@ -83,7 +83,7 @@ export default function HeroSection() {
   const glowIntensity = 0.4 + Math.sin(Date.now() / 1000) * 0.1;
 
   return (
-    <section ref={sectionRef} className="relative min-h-[140vh] overflow-hidden">
+    <section ref={sectionRef} className="relative min-h-[200vh] overflow-hidden">
       {/* Sticky container for the hero content */}
       <div className="sticky top-0 min-h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* Background layers */}
