@@ -62,15 +62,15 @@ export default function HeroSection() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight mb-6">
-            AI-Powered Web
+            Smarter Websites.
             <br />
-            <span className="text-gradient">Built by Humans</span>
+            <span className="text-gradient">Expert Craftsmanship.</span>
           </h1>
 
           <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            We use AI tools to design, build, and enhance websites and software 
-            for small and medium businesses — faster, smarter, and with expert human 
-            oversight at every step.
+            We leverage the latest AI technology to design, build, and optimise 
+            digital experiences for ambitious businesses — delivered faster, priced 
+            fairly, and crafted by skilled professionals.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -85,7 +85,7 @@ export default function HeroSection() {
               href="#portfolio"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg glass border border-border hover:border-primary/40 text-foreground font-semibold transition-all duration-300"
             >
-              See Our Work
+              View Our Portfolio
             </a>
           </div>
 
