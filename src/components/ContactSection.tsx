@@ -22,12 +22,12 @@ export default function ContactSection() {
           </RevealItem>
           <RevealItem>
             <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
-              Ready to <span className="text-gradient">Launch</span>?
+              Let's <span className="text-gradient">Talk</span>
             </h2>
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Tell us about your mission. We'll respond within 24 hours with a strategic brief.
+              Tell us about your project. We'll get back to you within 24 hours with a tailored proposal.
             </p>
           </RevealItem>
         </StaggerContainer>
@@ -66,13 +66,13 @@ export default function ContactSection() {
               <textarea rows={4} className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all resize-none" placeholder="Describe your project, goals, and timeline..." />
             </div>
             <button type="submit" disabled={submitted} className="w-full py-4 rounded-lg bg-primary text-primary-foreground font-semibold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all duration-300 animate-pulse-glow disabled:opacity-70">
-              {submitted ? 'Mission Received ✓' : (<>Launch Mission Brief <Send className="w-4 h-4" /></>)}
+              {submitted ? 'Message Sent ✓' : (<>Send Message <Send className="w-4 h-4" /></>)}
             </button>
           </motion.form>
 
           <motion.div variants={itemFromRight} className="lg:col-span-2 flex flex-col gap-6">
             <div className="glass rounded-2xl p-6 border border-border/50">
-              <h3 className="font-semibold text-foreground mb-4">Direct Channels</h3>
+              <h3 className="font-semibold text-foreground mb-4">Get in Touch</h3>
               <div className="space-y-4">
                 <a href="mailto:hello@aiwebsolutions.co.uk" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors group">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -89,8 +89,8 @@ export default function ContactSection() {
               </div>
             </div>
             <div className="glass rounded-2xl p-6 border border-border/50">
-              <h3 className="font-semibold text-foreground mb-2">Response Time</h3>
-              <p className="text-sm text-muted-foreground mb-4">We typically respond within 24 hours with a custom strategy proposal for your project.</p>
+              <h3 className="font-semibold text-foreground mb-2">Quick Turnaround</h3>
+              <p className="text-sm text-muted-foreground mb-4">We typically respond within 24 hours with a custom proposal for your project.</p>
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                 <span className="text-xs font-mono-tech text-green-400">Currently accepting new projects</span>
@@ -98,7 +98,7 @@ export default function ContactSection() {
             </div>
             <div className="glass rounded-2xl p-6 border border-border/50">
               <h3 className="font-semibold text-foreground mb-2">Free Consultation</h3>
-              <p className="text-sm text-muted-foreground">Every project starts with a free 30-minute discovery call. No obligations, just honest advice on how AI can transform your business.</p>
+              <p className="text-sm text-muted-foreground">Every project starts with a free 30-minute discovery call. No obligations — just honest advice on how we can help.</p>
             </div>
           </motion.div>
         </StaggerContainer>
