@@ -1,0 +1,84 @@
+import { motion } from 'framer-motion';
+import { Globe, Zap, Code2 } from 'lucide-react';
+
+const services = [
+  {
+    icon: Globe,
+    title: 'AI Website Creation',
+    description: 'From blank canvas to fully deployed — our AI analyses your industry, competitors, and brand to generate stunning, conversion-optimised websites in record time.',
+    features: ['Custom design generation', 'SEO-optimised from day one', 'Mobile-first architecture', 'CMS integration'],
+  },
+  {
+    icon: Zap,
+    title: 'Website Enhancement',
+    description: 'Already have a site? We deploy AI-powered upgrades — performance boosts, UX refinements, accessibility fixes, and modern redesigns that keep you ahead.',
+    features: ['Performance optimisation', 'UX/UI modernisation', 'Accessibility compliance', 'Analytics integration'],
+  },
+  {
+    icon: Code2,
+    title: 'Custom Software',
+    description: 'Bespoke AI-powered applications tailored to your unique business needs — from booking systems to data dashboards, built to scale with you.',
+    features: ['Full-stack development', 'AI/ML integration', 'Cloud deployment', 'Ongoing maintenance'],
+  },
+];
+
+export default function ServicesSection() {
+  return (
+    <section id="services" className="relative py-24 lg:py-32">
+      <div className="absolute inset-0 bg-grid opacity-10" />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <span className="font-mono-tech text-xs text-primary tracking-widest uppercase">// Services</span>
+          <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
+            What We <span className="text-gradient">Deploy</span>
+          </h2>
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            Three core mission modules, each powered by cutting-edge AI to deliver results faster and smarter.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          {services.map((service, i) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.6, delay: i * 0.15 }}
+              className="group relative glass rounded-2xl p-8 hover:glow-border transition-all duration-500 cursor-default"
+            >
+              {/* Icon */}
+              <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                <service.icon className="w-6 h-6 text-primary" />
+              </div>
+
+              <h3 className="text-xl font-semibold mb-3 text-foreground">{service.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6">{service.description}</p>
+
+              <ul className="space-y-2">
+                {service.features.map((f) => (
+                  <li key={f} className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <span className="w-1 h-1 rounded-full bg-primary" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Corner accent */}
+              <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden rounded-tr-2xl">
+                <div className="absolute top-0 right-0 w-[1px] h-8 bg-gradient-to-b from-primary/50 to-transparent" />
+                <div className="absolute top-0 right-0 h-[1px] w-8 bg-gradient-to-l from-primary/50 to-transparent" />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
