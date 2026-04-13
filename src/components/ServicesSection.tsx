@@ -4,21 +4,21 @@ import { StaggerContainer, RevealItem } from './ScrollReveal';
 const services = [
   {
     icon: Globe,
-    title: 'AI Website Creation',
-    description: 'From blank canvas to fully deployed — our AI analyses your industry, competitors, and brand to generate stunning, conversion-optimised websites in record time.',
-    features: ['Custom design generation', 'SEO-optimised from day one', 'Mobile-first architecture', 'CMS integration'],
+    title: 'AI-Powered Website Creation',
+    description: 'We use AI tools to research your industry, generate designs, and build stunning websites — then our team refines every detail to ensure it\'s perfect for your business.',
+    features: ['Custom design with AI assistance', 'SEO-optimised from day one', 'Mobile-first architecture', 'CMS integration'],
   },
   {
     icon: Zap,
-    title: 'Website Enhancement',
-    description: 'Already have a site? We deploy AI-powered upgrades — performance boosts, UX refinements, accessibility fixes, and modern redesigns that keep you ahead.',
+    title: 'Website Redesign & Enhancement',
+    description: 'Already have a site? We use AI to audit performance, identify improvements, and implement upgrades — with human expertise guiding every decision.',
     features: ['Performance optimisation', 'UX/UI modernisation', 'Accessibility compliance', 'Analytics integration'],
   },
   {
     icon: Code2,
-    title: 'Custom Software',
-    description: 'Bespoke AI-powered applications tailored to your unique business needs — from booking systems to data dashboards, built to scale with you.',
-    features: ['Full-stack development', 'AI/ML integration', 'Cloud deployment', 'Ongoing maintenance'],
+    title: 'Custom Software & Portals',
+    description: 'From booking systems to client portals and internal tools — we leverage AI to accelerate development while our engineers ensure quality and scalability.',
+    features: ['Full-stack development', 'AI-assisted workflows', 'Cloud deployment', 'Ongoing maintenance'],
   },
 ];
 
@@ -33,12 +33,12 @@ export default function ServicesSection() {
           </RevealItem>
           <RevealItem>
             <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
-              What We <span className="text-gradient">Deploy</span>
+              What We <span className="text-gradient">Do</span>
             </h2>
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Three core mission modules, each powered by cutting-edge AI to deliver results faster and smarter.
+              We combine cutting-edge AI tools with hands-on expertise to deliver exceptional digital products — faster and more affordably.
             </p>
           </RevealItem>
         </StaggerContainer>

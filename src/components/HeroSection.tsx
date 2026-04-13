@@ -58,19 +58,19 @@ export default function HeroSection() {
           {/* Status badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-primary/30 text-xs font-mono-tech text-primary mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            SYSTEMS ONLINE — ACCEPTING NEW MISSIONS
+            ACCEPTING NEW PROJECTS
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight mb-6">
-            We Build the{' '}
-            <span className="text-gradient">Future</span>
+            AI-Powered Web
             <br />
-            of Your Business
+            <span className="text-gradient">Built by Humans</span>
           </h1>
 
           <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            AI-powered web development and software solutions that transform 
-            small and medium businesses into digital powerhouses.
+            We use AI tools to design, build, and enhance websites and software 
+            for small and medium businesses — faster, smarter, and with expert human 
+            oversight at every step.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">

@@ -1,58 +1,57 @@
 import { motion } from 'framer-motion';
-import { Check, Rocket, Orbit, Shield } from 'lucide-react';
+import { Check, FileText, Layers, Shield } from 'lucide-react';
 import { StaggerContainer, RevealItem, scaleIn } from './ScrollReveal';
 
 const tiers = [
   {
-    name: 'Launch',
-    icon: Rocket,
-    price: '1,499',
-    description: 'Perfect for startups and small businesses ready to establish their digital presence.',
+    name: 'Single Page',
+    icon: FileText,
+    price: '300',
+    description: 'A polished, high-impact single page website — ideal for freelancers, new businesses, or landing pages.',
     features: [
-      'AI-generated website design',
-      'Up to 5 pages',
-      'Mobile responsive',
+      'AI-assisted design & build',
+      'Fully responsive layout',
       'Basic SEO setup',
       'Contact form integration',
-      '30-day support',
+      'Human review & refinement',
+      '14-day post-launch support',
     ],
-    cta: 'Begin Launch Sequence',
+    cta: 'Get Started',
     popular: false,
   },
   {
-    name: 'Orbit',
-    icon: Orbit,
-    price: '3,499',
-    description: 'For growing businesses that need a powerful, feature-rich web presence with ongoing enhancements.',
+    name: 'Multi Page',
+    icon: Layers,
+    price: '500',
+    description: 'A complete multi-page website for growing businesses that need room to showcase services, team, and more.',
     features: [
-      'Everything in Launch',
-      'Up to 15 pages',
+      'Everything in Single Page',
+      'Up to 10 pages',
       'Advanced SEO & analytics',
       'CMS integration',
-      'Booking/e-commerce features',
       'Performance optimisation',
-      '90-day priority support',
-      'Monthly AI enhancements',
+      'Blog or news section',
+      '30-day priority support',
     ],
-    cta: 'Enter Orbit',
+    cta: 'Get Started',
     popular: true,
   },
   {
-    name: 'Mission Control',
+    name: 'Portal & Software',
     icon: Shield,
-    price: 'Custom',
-    description: 'Enterprise-grade custom software and AI solutions tailored to your exact specifications.',
+    price: '1,000',
+    description: 'Custom portals, booking systems, or business software — built with AI speed and human precision.',
     features: [
-      'Everything in Orbit',
-      'Custom web applications',
-      'AI/ML integration',
-      'API development',
-      'Cloud infrastructure',
-      'Dedicated project manager',
-      '12-month support contract',
-      'Ongoing AI optimisation',
+      'Everything in Multi Page',
+      'Client/staff portal',
+      'Custom business logic',
+      'Database & user management',
+      'API integrations',
+      'Cloud hosting setup',
+      '90-day support contract',
+      'Ongoing maintenance options',
     ],
-    cta: 'Request Briefing',
+    cta: 'Get a Quote',
     popular: false,
   },
 ];
@@ -68,12 +67,12 @@ export default function PricingSection() {
           </RevealItem>
           <RevealItem>
             <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
-              Mission <span className="text-gradient">Tiers</span>
+              Simple <span className="text-gradient">Pricing</span>
             </h2>
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Choose the mission package that matches your ambition. All tiers include AI-powered development.
+              Transparent pricing with no hidden fees. Every tier includes AI-assisted development with expert human oversight.
             </p>
           </RevealItem>
         </StaggerContainer>
@@ -100,9 +99,9 @@ export default function PricingSection() {
               </div>
               <div className="mb-4">
                 <span className="text-3xl font-bold text-foreground">
-                  {tier.price !== 'Custom' ? '£' : ''}{tier.price}
+                  £{tier.price}
                 </span>
-                {tier.price !== 'Custom' && <span className="text-sm text-muted-foreground ml-1">starting</span>}
+                <span className="text-sm text-muted-foreground ml-1">starting</span>
               </div>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">{tier.description}</p>
               <ul className="space-y-3 mb-8">
