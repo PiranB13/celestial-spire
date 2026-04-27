@@ -104,6 +104,9 @@ export default function HeroSection() {
                 background: `radial-gradient(circle, hsl(var(--primary) / ${0.15 + scrollProgress * 0.05}) 0%, transparent 70%)`,
               }}
             />
+            {/* Spinning rings */}
+            <div className="absolute inset-[5%] rounded-full border border-primary/10 animate-[spin_18s_linear_infinite]" />
+            <div className="absolute inset-[15%] rounded-full border border-dashed border-primary/07 animate-[spin_28s_linear_infinite_reverse]" />
 
             {/* Brain image */}
             <img
@@ -148,7 +151,7 @@ export default function HeroSection() {
             {/* Status badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-primary/30 text-xs font-mono-tech text-primary mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              ACCEPTING NEW PROJECTS
+              ACCEPTING NEW PROJECTS &nbsp;·&nbsp; LIMITED SPOTS AVAILABLE
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight mb-6">
@@ -168,14 +171,15 @@ export default function HeroSection() {
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all duration-300 animate-pulse-glow group"
               >
-                Start Your Project
+                Get Your Free Quote
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="#portfolio"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg glass border border-border hover:border-primary/40 text-foreground font-semibold transition-all duration-300"
               >
-                View Our Portfolio
+                See Real Results
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="opacity-70"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
               </a>
             </div>
 
