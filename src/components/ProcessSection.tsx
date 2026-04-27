@@ -30,7 +30,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section id="process" className="relative py-24 lg:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.04),transparent_60%)]" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <StaggerContainer className="text-center mb-16">

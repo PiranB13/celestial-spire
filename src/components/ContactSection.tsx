@@ -61,13 +61,26 @@ export default function ContactSection() {
                   <option value="other">Other</option>
                 </select>
               </div>
+              <div className="mb-4">
+                <label className="block text-xs font-mono-tech text-muted-foreground mb-2 uppercase tracking-wider">Budget Range</label>
+                <select className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/50 text-foreground text-sm focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all appearance-none">
+                  <option value="">Select a range</option>
+                  <option value="under500">Under £500</option>
+                  <option value="500-1000">£500 – £1,000</option>
+                  <option value="1000-5000">£1,000 – £5,000</option>
+                  <option value="5000plus">£5,000+</option>
+                </select>
+              </div>
               <div className="mb-6">
-                <label className="block text-xs font-mono-tech text-muted-foreground mb-2 uppercase tracking-wider">Project Details</label>
-                <textarea rows={4} className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all resize-none" placeholder="Tell us about your goals, timeline, and any specific requirements..." />
+                <label className="block text-xs font-mono-tech text-muted-foreground mb-2 uppercase tracking-wider">
+                  Project Details <span className="text-muted-foreground/60 normal-case font-normal">(optional)</span>
+                </label>
+                <textarea rows={3} className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all resize-none" placeholder="Briefly describe your goals and any specific requirements..." />
               </div>
               <button type="submit" disabled={submitted} className="w-full py-4 rounded-lg bg-primary text-primary-foreground font-semibold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all duration-300 animate-pulse-glow disabled:opacity-70">
-                {submitted ? 'Message Sent ✓' : (<>Send Message <Send className="w-4 h-4" /></>)}
+                {submitted ? (<><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg> Message Sent!</>) : (<>Get My Free Quote <Send className="w-4 h-4" /></>)}
               </button>
+              <p className="text-center text-xs text-muted-foreground mt-3">🔒 No commitment required &nbsp;·&nbsp; We respond within 24 hours &nbsp;·&nbsp; No spam, ever</p>
             </form>
           </RevealItem>
 
