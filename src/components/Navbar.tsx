@@ -55,7 +55,7 @@ export default function Navbar() {
               href="#contact"
               className="ml-4 px-5 py-2 text-sm font-medium rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 animate-pulse-glow"
             >
-              Start Project
+              Get a quote
             </a>
           </div>
 
@@ -90,7 +90,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
               className="mt-2 px-5 py-3 text-sm font-medium rounded-lg bg-primary text-primary-foreground text-center"
             >
-              Start Project
+              Get a quote
             </a>
           </div>
         </motion.div>

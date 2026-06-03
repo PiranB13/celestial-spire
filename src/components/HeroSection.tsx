@@ -165,7 +165,7 @@ export default function HeroSection() {
               3 project slots left for this month
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight mb-6">
               Websites with depth.
               <br />
               <span className="text-gradient">Built by hand.</span>
@@ -180,14 +180,14 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 active:scale-[0.98] transition-all duration-200 group"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 active:scale-[0.98] transition-all duration-300 animate-pulse-glow group"
               >
-                Get a free quote
+                Get a quote
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="#portfolio"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg glass border border-border hover:border-primary/40 text-foreground font-semibold transition-all duration-200 active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg glass border border-border hover:border-primary/40 text-foreground font-semibold transition-all duration-300 active:scale-[0.98]"
               >
                 See live work
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="opacity-70"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
