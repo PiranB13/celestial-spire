@@ -166,21 +166,21 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight mb-6">
-              Websites with depth.
+              Studio-grade websites.
               <br />
-              <span className="text-gradient">Built by hand.</span>
+              <span className="text-gradient">Built with AI.</span>
             </h1>
 
             <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              We use AI for the boring parts. Real engineers and designers handle
-              everything you can see, type into, or click. The result lands faster,
-              costs less, and behaves like it was built with care, because it was.
+              AI does the heavy lifting on design, copy, and code. That is how
+              we ship sites at the quality of a traditional studio in a fraction
+              of the time, and for a fraction of the price.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 active:scale-[0.98] transition-all duration-300 animate-pulse-glow group"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 active:scale-[0.98] transition-all duration-300 glow-static group"
               >
                 Get a quote
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

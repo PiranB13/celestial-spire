@@ -6,19 +6,19 @@ const steps = [
     number: '01',
     icon: Lightbulb,
     title: 'Discovery',
-    description: 'A 30-minute call. You explain the business, we ask the questions you wish your last agency had. By the end you have a written scope and a fixed quote.',
+    description: 'A 30-minute call. You explain the business and the goal. We feed that brief into the AI design and research pipeline and come back with a written scope and a fixed quote.',
   },
   {
     number: '02',
     icon: Cpu,
     title: 'Design and build',
-    description: 'AI handles content drafts, image gen, and boilerplate. A human designs the system, writes the brand-specific code, and decides what actually ships. Days of work, not weeks.',
+    description: 'AI generates the design directions, the copy, and most of the code. We curate, refine, and lock everything to the brief. Days of progress, not weeks.',
   },
   {
     number: '03',
     icon: Wrench,
     title: 'Refinement',
-    description: 'Lighthouse audits, real-device testing, accessibility checks, copy passes. You get a staging link to break things on. Nothing ships until you sign off.',
+    description: 'Lighthouse audits, real-device testing, accessibility checks, copy passes, all automated then reviewed. You get a staging link to break things on. Nothing ships until you sign off.',
   },
   {
     number: '04',
@@ -44,7 +44,7 @@ export default function ProcessSection() {
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Four stages, no surprises. The whole timeline fits on a calendar tab.
+              AI compresses what used to be weeks into days. Four stages, no surprises, the whole timeline fits on a calendar tab.
             </p>
           </RevealItem>
         </StaggerContainer>

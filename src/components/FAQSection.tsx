@@ -12,8 +12,8 @@ const faqs = [
     a: "Four packages: Basic from £300, Pro from £500, Expert from £1,000, Full Brand from £2,000. Every quote is fixed-fee in writing before anything starts.",
   },
   {
-    q: 'Are you really using AI to build the sites?',
-    a: "Yes, for content drafts, image generation, scaffolding, and boilerplate. A person designs the system and writes the bits unique to your project. AI removes 60 to 70 percent of the typing; it does not decide what is good.",
+    q: 'How much of the work is actually AI?',
+    a: "Most of it. AI generates the design directions, the copy, and the majority of the code. We direct it, refine the output against the brief, and ship what works. That pipeline is what lets us deliver studio-grade results at a fraction of the price and time.",
   },
   {
     q: "What is included in every tier?",

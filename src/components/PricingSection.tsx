@@ -10,7 +10,7 @@ const tiers = [
       'A focused one-page site for freelancers, launches, and small ventures that need a strong first impression without the overhead.',
     features: [
       'One bespoke page, fully responsive',
-      'AI-accelerated build with human craft',
+      'AI-driven design and build',
       'Core SEO and meta setup',
       'Contact form with spam protection',
       '14-day post-launch support',
@@ -33,7 +33,7 @@ const tiers = [
       '30-day priority support',
     ],
     cta: 'Get a quote',
-    popular: true,
+    popular: false,
   },
   {
     name: 'Expert',
@@ -51,7 +51,7 @@ const tiers = [
       '90-day dedicated support',
     ],
     cta: 'Get a quote',
-    popular: false,
+    popular: true,
   },
   {
     name: 'Full Brand',
@@ -129,7 +129,7 @@ export default function PricingSection() {
                   href="#contact"
                   className={`mt-auto block text-center py-3 rounded-lg text-sm font-semibold transition-all duration-300 active:scale-[0.98] ${
                     tier.popular
-                      ? 'bg-primary text-primary-foreground hover:bg-primary/90 animate-pulse-glow'
+                      ? 'bg-primary text-primary-foreground hover:bg-primary/90 glow-static'
                       : 'glass border border-border hover:border-primary/40 text-foreground'
                   }`}
                 >

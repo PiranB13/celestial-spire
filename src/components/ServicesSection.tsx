@@ -5,19 +5,19 @@ const services = [
   {
     icon: Globe,
     title: 'New websites',
-    description: 'Concept to launch in days, not months. We pull market research and content drafts with AI, then a designer and engineer shape the actual product. You get something specific to your business, not a template wearing your logo.',
+    description: 'Concept to launch in days, not months. AI generates the design directions, copy, and code; we direct it and ship what works. You get something specific to your business, not a template wearing your logo.',
     features: ['Custom design, no templates', 'SEO and meta set up properly', 'Responsive at every breakpoint', 'CMS so non-devs can edit copy'],
   },
   {
     icon: Zap,
     title: 'Redesigns and rescues',
-    description: "Your site loads slow, looks old, or doesn't convert. We audit Core Web Vitals, accessibility, and the actual user journey, then rebuild the parts that matter. Often you keep more than you replace.",
+    description: "Your site loads slow, looks old, or does not convert. AI audits Core Web Vitals, accessibility, and the user journey, then drafts the fixes. We ship the changes that actually move the metric.",
     features: ['Performance and Core Web Vitals', 'Modern UX without the rewrite', 'WCAG 2.2 AA compliance', 'Funnel and event tracking'],
   },
   {
     icon: Code2,
     title: 'Custom platforms',
-    description: 'Beyond websites: client portals, booking systems, retail storefronts, internal tools. Built on stacks engineers actually maintain (Next.js, Supabase, Stripe) so you are not locked into a black box.',
+    description: 'Beyond websites: client portals, booking systems, retail storefronts, internal tools. Built on stacks AI handles well (Next.js, Supabase, Stripe) so we move quickly and you stay portable.',
     features: ['Full-stack apps, owned by you', 'Auth, roles, and user areas', 'Stripe, Twilio, and API plumbing', 'Cloud deploy with CI'],
   },
 ];
@@ -38,7 +38,7 @@ export default function ServicesSection() {
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Three things, all done well. Pick the one closest to your problem; we will tell you honestly if it is the wrong fit.
+              Three lanes. AI handles the volume; we make sure what ships is worth shipping. Pick the closest fit; we will say if it is wrong.
             </p>
           </RevealItem>
         </StaggerContainer>

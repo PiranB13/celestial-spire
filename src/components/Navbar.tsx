@@ -53,7 +53,7 @@ export default function Navbar() {
             ))}
             <a
               href="#contact"
-              className="ml-4 px-5 py-2 text-sm font-medium rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 animate-pulse-glow"
+              className="ml-4 px-5 py-2 text-sm font-medium rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 glow-static"
             >
               Get a quote
             </a>

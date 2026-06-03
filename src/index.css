@@ -120,6 +120,14 @@
     border-color: hsl(var(--glow) / 0.4);
   }
 
+  .glow-static {
+    box-shadow: 0 0 22px -6px hsl(var(--glow) / 0.55);
+    transition: box-shadow 0.3s ease;
+  }
+  .glow-static:hover {
+    box-shadow: 0 0 32px -6px hsl(var(--glow) / 0.75);
+  }
+
   .glow-border-accent {
     box-shadow: 0 0 20px -3px hsl(var(--glow-accent) / 0.3),
                 inset 0 0 20px -3px hsl(var(--glow-accent) / 0.1);
