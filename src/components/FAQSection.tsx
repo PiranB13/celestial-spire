@@ -4,28 +4,28 @@ import { StaggerContainer, RevealItem } from './ScrollReveal';
 
 const faqs = [
   {
-    q: 'How long does it take to build a website?',
-    a: 'A single-page site typically takes 3–5 working days. A multi-page site takes 1–2 weeks. Custom portals and software are scoped individually, typically 4–8 weeks. AI dramatically accelerates our workflow compared to traditional agencies.',
+    q: 'How long does a build take?',
+    a: "Basic (one page) ships in 3 to 5 working days. Pro (up to 5 pages) lands in 1 to 2 weeks. Expert builds with 3D, portals, or full retail are scoped individually and usually run 4 to 8 weeks. Full Brand adds 2 weeks for the identity work.",
   },
   {
-    q: 'How much does a website cost?',
-    a: 'Our pricing starts at £300 for a single-page site, £500 for a multi-page site, and £1,000 for custom portals and software. All prices are fixed-fee — no hidden costs, no surprises.',
+    q: 'What does it cost?',
+    a: "Four packages: Basic from £300, Pro from £500, Expert from £1,000, Full Brand from £2,000. Every quote is fixed-fee in writing before anything starts.",
   },
   {
-    q: 'Do you use AI to build websites?',
-    a: 'Yes. We use AI tools to accelerate design generation, content creation, and code production — achieving in days what traditionally takes weeks. Every output is reviewed and refined by our experienced developers to ensure quality.',
+    q: 'Are you really using AI to build the sites?',
+    a: "Yes, for content drafts, image generation, scaffolding, and boilerplate. A person designs the system and writes the bits unique to your project. AI removes 60 to 70 percent of the typing; it does not decide what is good.",
   },
   {
-    q: 'What is included in the price?',
-    a: 'All packages include AI-assisted design and development, fully responsive layouts, SEO foundations, an integrated contact form, expert QA review, and post-launch support. Multi-page and portal packages include additional features — see our pricing section.',
+    q: "What is included in every tier?",
+    a: "Custom design, responsive layouts, SEO and meta setup, contact form with spam protection, real-device QA, and post-launch support. Higher tiers add CMS, analytics, 3D, portals, retail, and brand work. See the pricing section for the per-tier breakdown.",
   },
   {
-    q: 'Do you offer ongoing support after launch?',
-    a: 'Yes. All packages include post-launch support: 14 days for Single Page, 30 days for Multi Page, and 90 days for Portal & Software. Ongoing maintenance retainers are also available on request.',
+    q: 'What happens after launch?',
+    a: "Support is included in every tier: 14 days on Basic, 30 days on Pro, 90 days on Expert, 6 months on Full Brand. Beyond that we offer a maintenance retainer or hand everything over so your in-house team or developer can take it forward.",
   },
   {
-    q: 'Can you redesign my existing website?',
-    a: 'Absolutely. Our redesign and optimisation service audits your current site for speed, UX, and accessibility issues, then implements targeted improvements. We can also migrate your content to a new, modern platform.',
+    q: 'Can you redesign or rescue my current site?',
+    a: "Yes. We audit performance, accessibility, and the conversion path, then rebuild only what needs rebuilding. Often the content and brand stay; the engine underneath gets replaced.",
   },
 ];
 
@@ -66,13 +66,13 @@ export default function FAQSection() {
           </RevealItem>
           <RevealItem>
             <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
-              Common <span className="text-gradient">Questions</span>
+              Common <span className="text-gradient">questions</span>
             </h2>
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Everything you need to know before getting started. Can't find what you're looking for?{' '}
-              <a href="#contact" className="text-primary hover:underline">Just ask us.</a>
+              Answers to the things people actually ask before signing. Anything missing?{' '}
+              <a href="#contact" className="text-primary hover:underline">Send us a note.</a>
             </p>
           </RevealItem>
         </StaggerContainer>

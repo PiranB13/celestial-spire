@@ -4,21 +4,21 @@ import { StaggerContainer, RevealItem } from './ScrollReveal';
 const services = [
   {
     icon: Globe,
-    title: 'Website Creation',
-    description: 'From first concept to final launch — we harness AI to analyse your market, generate bespoke designs, and build high-performance websites. Every pixel is then refined by our team to ensure it truly represents your brand.',
-    features: ['Bespoke AI-generated design', 'Search engine optimisation built in', 'Fully responsive across all devices', 'Content management system included'],
+    title: 'New websites',
+    description: 'Concept to launch in days, not months. We pull market research and content drafts with AI, then a designer and engineer shape the actual product. You get something specific to your business, not a template wearing your logo.',
+    features: ['Custom design, no templates', 'SEO and meta set up properly', 'Responsive at every breakpoint', 'CMS so non-devs can edit copy'],
   },
   {
     icon: Zap,
-    title: 'Redesign & Optimisation',
-    description: 'Transform an underperforming website into a powerful business asset. Our AI audits your current site for speed, UX, and accessibility issues — then our developers implement targeted improvements that deliver measurable results.',
-    features: ['Core Web Vitals optimisation', 'Modern UX/UI overhaul', 'WCAG accessibility compliance', 'Advanced analytics & tracking'],
+    title: 'Redesigns and rescues',
+    description: "Your site loads slow, looks old, or doesn't convert. We audit Core Web Vitals, accessibility, and the actual user journey, then rebuild the parts that matter. Often you keep more than you replace.",
+    features: ['Performance and Core Web Vitals', 'Modern UX without the rewrite', 'WCAG 2.2 AA compliance', 'Funnel and event tracking'],
   },
   {
     icon: Code2,
-    title: 'Custom Software & Portals',
-    description: 'Need more than a website? We design and develop bespoke applications — client portals, booking platforms, internal tools — using AI to accelerate delivery without compromising on quality or security.',
-    features: ['End-to-end application development', 'Secure user authentication & portals', 'Third-party API integration', 'Scalable cloud infrastructure'],
+    title: 'Custom platforms',
+    description: 'Beyond websites: client portals, booking systems, retail storefronts, internal tools. Built on stacks engineers actually maintain (Next.js, Supabase, Stripe) so you are not locked into a black box.',
+    features: ['Full-stack apps, owned by you', 'Auth, roles, and user areas', 'Stripe, Twilio, and API plumbing', 'Cloud deploy with CI'],
   },
 ];
 
@@ -33,12 +33,12 @@ export default function ServicesSection() {
           </RevealItem>
           <RevealItem>
             <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
-              What We <span className="text-gradient">Do</span>
+              What we <span className="text-gradient">build</span>
             </h2>
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              AI-accelerated development, guided by experienced professionals. We deliver premium digital solutions at a fraction of the traditional cost and timeline.
+              Three things, all done well. Pick the one closest to your problem; we will tell you honestly if it is the wrong fit.
             </p>
           </RevealItem>
         </StaggerContainer>

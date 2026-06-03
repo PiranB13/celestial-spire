@@ -44,20 +44,29 @@ function useScrollProgress(ref: React.RefObject<HTMLElement | null>) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let rafId = 0;
+    const update = () => {
+      rafId = 0;
       if (!ref.current) return;
       const rect = ref.current.getBoundingClientRect();
       const viewportH = window.innerHeight;
-      // Total scrollable distance while the sticky child stays pinned
       const stickyRange = Math.max(1, rect.height - viewportH);
       const scrolled = -rect.top;
       const p = Math.max(0, Math.min(1, scrolled / stickyRange));
       setProgress(p);
     };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => {
+      if (rafId) return;
+      rafId = requestAnimationFrame(update);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, [ref]);
 
   return progress;
@@ -67,9 +76,9 @@ export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const scrollProgress = useScrollProgress(sectionRef);
 
-  // Morph completes within the first ~70% of the pinned scroll range,
-  // so the image transforms in place before the page continues moving.
-  const morphProgress = Math.min(1, scrollProgress / 0.7);
+  // Brief hold at the start (brain fully visible), morph through the middle,
+  // brief hold at the end (chip fully visible) before the page releases.
+  const morphProgress = Math.max(0, Math.min(1, (scrollProgress - 0.1) / 0.7));
 
   // Brain: fully visible at 0, fades out over first half of morph
   const brainOpacity = Math.max(0, 1 - morphProgress * 2);
@@ -84,13 +93,10 @@ export default function HeroSection() {
   const dataRotate = (1 - dataProgress) * -20;
   const dataBlur = (1 - dataProgress) * 8;
 
-  // Shared glow intensity
-  const glowIntensity = 0.4 + Math.sin(Date.now() / 1000) * 0.1;
-
   return (
-    <section ref={sectionRef} className="relative min-h-[400vh] overflow-hidden">
+    <section ref={sectionRef} className="relative min-h-[380vh]">
       {/* Sticky container for the hero content */}
-      <div className="sticky top-0 min-h-screen flex flex-col items-center justify-center overflow-hidden">
+      <div className="sticky top-0 min-h-dvh flex flex-col items-center justify-center overflow-hidden">
         {/* Background layers */}
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="absolute inset-0 scanline pointer-events-none" />
@@ -156,34 +162,34 @@ export default function HeroSection() {
             {/* Status badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-primary/30 text-xs font-mono-tech text-primary mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              ACCEPTING NEW PROJECTS &nbsp;·&nbsp; LIMITED SPOTS AVAILABLE
+              3 project slots left for this month
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight mb-6">
-              Smarter Websites.
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
+              Websites with depth.
               <br />
-              <span className="text-gradient">Expert Craftsmanship.</span>
+              <span className="text-gradient">Built by hand.</span>
             </h1>
 
             <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              We leverage the latest AI technology to design, build, and optimise
-              digital experiences for ambitious businesses — delivered faster, priced
-              fairly, and crafted by skilled professionals.
+              We use AI for the boring parts. Real engineers and designers handle
+              everything you can see, type into, or click. The result lands faster,
+              costs less, and behaves like it was built with care, because it was.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all duration-300 animate-pulse-glow group"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 active:scale-[0.98] transition-all duration-200 group"
               >
-                Get Your Free Quote
+                Get a free quote
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="#portfolio"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg glass border border-border hover:border-primary/40 text-foreground font-semibold transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg glass border border-border hover:border-primary/40 text-foreground font-semibold transition-all duration-200 active:scale-[0.98]"
               >
-                See Real Results
+                See live work
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="opacity-70"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
               </a>
             </div>
@@ -195,10 +201,10 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 1 }}
               className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl mx-auto glass rounded-2xl p-6 border border-border/50"
             >
-              <AnimatedCounter end={50} suffix="+" label="Projects" />
-              <AnimatedCounter end={99} suffix="%" label="Satisfaction" />
-              <AnimatedCounter end={3} suffix="x" label="Faster Dev" />
-              <AnimatedCounter end={24} suffix="/7" label="Support" />
+              <AnimatedCounter end={52} suffix="" label="Sites shipped" />
+              <AnimatedCounter end={97} suffix="%" label="Renewed scope" />
+              <AnimatedCounter end={11} suffix=" days" label="Avg. turnaround" />
+              <AnimatedCounter end={4} suffix=" yrs" label="In practice" />
             </motion.div>
           </motion.div>
 

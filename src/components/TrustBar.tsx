@@ -12,7 +12,7 @@ export default function TrustBar() {
         </div>
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse flex-shrink-0" />
-          <span className="font-mono-tech text-[10px] text-primary tracking-widest">3 PROJECT SPOTS OPEN THIS MONTH</span>
+          <span className="font-mono-tech text-[10px] text-primary tracking-widest uppercase">3 slots open this month</span>
         </div>
       </div>
     </div>

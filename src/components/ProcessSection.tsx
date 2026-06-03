@@ -5,26 +5,26 @@ const steps = [
   {
     number: '01',
     icon: Lightbulb,
-    title: 'Discovery & Strategy',
-    description: 'We begin with a free consultation to understand your business, goals, and audience. Our team researches your market and competitors to define a clear digital strategy.',
+    title: 'Discovery',
+    description: 'A 30-minute call. You explain the business, we ask the questions you wish your last agency had. By the end you have a written scope and a fixed quote.',
   },
   {
     number: '02',
     icon: Cpu,
-    title: 'AI-Powered Design & Build',
-    description: 'Using advanced AI tools, we generate bespoke designs, produce optimised content, and rapidly build your site or application — achieving in days what traditionally takes weeks.',
+    title: 'Design and build',
+    description: 'AI handles content drafts, image gen, and boilerplate. A human designs the system, writes the brand-specific code, and decides what actually ships. Days of work, not weeks.',
   },
   {
     number: '03',
     icon: Wrench,
-    title: 'Expert Refinement & QA',
-    description: 'Every element is then reviewed and refined by our experienced developers and designers. We ensure pixel-perfect quality, accessibility compliance, and flawless performance.',
+    title: 'Refinement',
+    description: 'Lighthouse audits, real-device testing, accessibility checks, copy passes. You get a staging link to break things on. Nothing ships until you sign off.',
   },
   {
     number: '04',
     icon: Rocket,
-    title: 'Launch & Ongoing Support',
-    description: 'We handle deployment, analytics setup, and SEO configuration. After launch, we provide dedicated support and can continue enhancing your platform as your business grows.',
+    title: 'Launch',
+    description: 'Deploy, DNS, analytics, search console. We stay on hand for the support window in your tier, and you keep full ownership of code, hosting, and accounts.',
   },
 ];
 
@@ -39,12 +39,12 @@ export default function ProcessSection() {
           </RevealItem>
           <RevealItem>
             <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
-              How We <span className="text-gradient">Work</span>
+              How we <span className="text-gradient">work</span>
             </h2>
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              AI handles the heavy lifting. Our experts ensure the finished product is exceptional. Here's how we bring your project to life.
+              Four stages, no surprises. The whole timeline fits on a calendar tab.
             </p>
           </RevealItem>
         </StaggerContainer>

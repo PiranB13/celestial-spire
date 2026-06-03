@@ -1,57 +1,77 @@
-import { motion } from 'framer-motion';
-import { Check, FileText, Layers, Shield } from 'lucide-react';
-import { StaggerContainer, RevealItem, scaleIn } from './ScrollReveal';
+import { Check, Type, LayoutDashboard, Boxes, Hexagon } from 'lucide-react';
+import { StaggerContainer, RevealItem } from './ScrollReveal';
 
 const tiers = [
   {
-    name: 'Single Page',
-    icon: FileText,
-    price: '300',
-    description: 'A striking, conversion-focused single page — perfect for freelancers, startups, or product launches that need to make an immediate impact.',
+    name: 'Basic',
+    icon: Type,
+    price: 300,
+    tagline: 'Single page, ready to convert.',
+    description:
+      'A focused one-page site for freelancers, launches, and small ventures that need a strong first impression without the overhead.',
     features: [
-      'AI-assisted design & development',
-      'Fully responsive across all devices',
-      'SEO foundations & meta optimisation',
-      'Integrated contact form',
-      'Expert review & quality assurance',
+      'One bespoke page, fully responsive',
+      'AI-accelerated build with human craft',
+      'Core SEO and meta setup',
+      'Contact form with spam protection',
       '14-day post-launch support',
     ],
-    cta: 'Get Started',
+    cta: 'Start with basic',
     popular: false,
   },
   {
-    name: 'Multi Page',
-    icon: Layers,
-    price: '500',
-    description: 'A comprehensive, professionally crafted website for businesses ready to establish a commanding online presence with room to grow.',
+    name: 'Pro',
+    icon: LayoutDashboard,
+    price: 500,
+    tagline: 'Up to 5 pages, room to grow.',
+    description:
+      'A full website for businesses building a serious online presence. Structure, content management, and the polish to keep visitors moving.',
     features: [
-      'Everything in Single Page',
-      'Up to 10 bespoke pages',
-      'Advanced SEO & analytics setup',
-      'Content management system',
-      'Performance & speed optimisation',
-      'Blog or news integration',
+      'Everything in Basic',
+      'Up to 5 bespoke pages',
+      'Headless CMS so you can edit copy',
+      'Analytics and conversion tracking',
+      'Performance and Core Web Vitals tuning',
       '30-day priority support',
     ],
-    cta: 'Get Started',
+    cta: 'Choose pro',
     popular: true,
   },
   {
-    name: 'Portal & Software',
-    icon: Shield,
-    price: '1,000',
-    description: 'Bespoke digital platforms — client portals, booking engines, or internal tools — engineered with precision and built to scale with your business.',
+    name: 'Expert',
+    icon: Boxes,
+    price: 1000,
+    tagline: '3D, portals, and retail at scale.',
+    description:
+      'Custom platforms with real depth: interactive 3D scenes, client portals, or full e-commerce. Engineered to load fast and stay maintainable.',
     features: [
-      'Everything in Multi Page',
-      'Secure client or staff portal',
-      'Custom business logic & workflows',
-      'Database & user management',
-      'Third-party API integrations',
-      'Cloud hosting & deployment',
+      'Everything in Pro',
+      'Interactive 3D scenes or portal app',
+      'Storefront, checkout, and inventory',
+      'Authenticated user areas with roles',
+      'Third-party integrations (Stripe, CRMs, APIs)',
+      'Cloud hosting and CI deploy pipeline',
       '90-day dedicated support',
-      'Ongoing maintenance available',
     ],
-    cta: 'Get a Quote',
+    cta: 'Talk to us',
+    popular: false,
+  },
+  {
+    name: 'Full Brand',
+    icon: Hexagon,
+    price: 2000,
+    tagline: 'Identity and product, one team.',
+    description:
+      'Brand identity built alongside the platform: logo system, type, palette, and voice, applied across the entire Expert build.',
+    features: [
+      'Everything in Expert',
+      'Logo system and visual identity',
+      'Type, colour, and motion guidelines',
+      'Brand voice and messaging framework',
+      'Social and marketing asset kit',
+      'Six months of evolutionary support',
+    ],
+    cta: 'Build the brand',
     popular: false,
   },
 ];
@@ -66,54 +86,64 @@ export default function PricingSection() {
             <span className="font-mono-tech text-xs text-primary tracking-widest uppercase">// Pricing</span>
           </RevealItem>
           <RevealItem>
-            <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
-              Transparent <span className="text-gradient">Pricing</span>
+            <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4 text-balance">
+              Honest pricing, <span className="text-gradient">no surprises</span>
             </h2>
           </RevealItem>
           <RevealItem>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              No hidden fees, no surprises. Choose the package that fits your goals — every tier includes AI-accelerated development with expert human oversight.
+            <p className="text-muted-foreground max-w-xl mx-auto text-pretty">
+              Four packages, four levels of ambition. Every tier ships with the same engineering bar; the difference is scope.
             </p>
           </RevealItem>
         </StaggerContainer>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6 items-stretch">
           {tiers.map((tier) => (
             <RevealItem key={tier.name} direction="up">
               <div
-                className={`relative glass rounded-2xl p-8 ${
-                  tier.popular ? 'glow-border border-primary/40 md:-mt-4 md:mb-[-16px]' : 'border border-border/50'
-                } transition-all duration-500 hover:glow-border`}
+                className={`relative flex flex-col h-full glass rounded-2xl p-7 transition-all duration-500 ${
+                  tier.popular
+                    ? 'border border-primary/50 ring-1 ring-primary/20 shadow-[0_0_60px_-15px_hsl(var(--primary)/0.4)]'
+                    : 'border border-border/50 hover:border-primary/30'
+                }`}
               >
                 {tier.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold font-mono-tech tracking-wider">
-                    MOST POPULAR
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-primary text-primary-foreground text-[10px] font-semibold font-mono-tech tracking-widest uppercase">
+                    Most chosen
                   </div>
                 )}
-                <div className="flex items-center gap-3 mb-4">
+
+                <div className="flex items-center gap-3 mb-5">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
-                    <tier.icon className="w-5 h-5 text-primary" />
+                    <tier.icon className="w-5 h-5 text-primary" strokeWidth={1.75} />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground">{tier.name}</h3>
+                  <h3 className="text-lg font-semibold text-foreground tracking-tight">{tier.name}</h3>
                 </div>
-                <div className="mb-4">
-                  <span className="text-3xl font-bold text-foreground">£{tier.price}</span>
-                  <span className="text-sm text-muted-foreground ml-1">starting</span>
+
+                <div className="mb-2">
+                  <span className="text-xs uppercase tracking-widest text-muted-foreground font-mono-tech">from</span>
                 </div>
-                <p className="text-sm text-muted-foreground mb-6 leading-relaxed">{tier.description}</p>
-                <ul className="space-y-3 mb-8">
+                <div className="mb-3 flex items-baseline gap-1">
+                  <span className="text-4xl font-bold text-foreground tabular-nums">£{tier.price.toLocaleString()}</span>
+                </div>
+
+                <p className="text-sm font-medium text-foreground/90 mb-2">{tier.tagline}</p>
+                <p className="text-sm text-muted-foreground mb-6 leading-relaxed text-pretty">{tier.description}</p>
+
+                <ul className="space-y-2.5 mb-8">
                   {tier.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                      {f}
+                      <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" strokeWidth={2.25} />
+                      <span className="text-pretty">{f}</span>
                     </li>
                   ))}
                 </ul>
+
                 <a
                   href="#contact"
-                  className={`block text-center py-3 rounded-lg text-sm font-semibold transition-all duration-300 ${
+                  className={`mt-auto block text-center py-3 rounded-lg text-sm font-semibold transition-all duration-200 active:scale-[0.98] ${
                     tier.popular
-                      ? 'bg-primary text-primary-foreground hover:bg-primary/90 animate-pulse-glow'
+                      ? 'bg-primary text-primary-foreground hover:bg-primary/90'
                       : 'glass border border-border hover:border-primary/40 text-foreground'
                   }`}
                 >
@@ -123,6 +153,10 @@ export default function PricingSection() {
             </RevealItem>
           ))}
         </div>
+
+        <p className="text-center text-xs text-muted-foreground/70 mt-10 font-mono-tech tracking-wider uppercase">
+          Quoted in GBP. Final figure depends on scope; nothing starts without a written estimate.
+        </p>
       </div>
     </section>
   );
