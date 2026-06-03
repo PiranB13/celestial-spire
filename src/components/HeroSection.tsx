@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 import NeuralNetwork3D from './NeuralNetwork3D';
 import heroBrain from '@/assets/hero-brain.png';
