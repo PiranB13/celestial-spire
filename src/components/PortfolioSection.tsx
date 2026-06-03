@@ -10,37 +10,37 @@ import serenityImg from '@/assets/portfolio-serenity.jpg';
 const projects = [
   {
     title: 'RugbyConnect',
-    description: 'Recruitment and scouting platform connecting players, coaches, and clubs across the UK. Real-time match data, profile pages, and a back-office for clubs.',
+    description: 'A comprehensive rugby recruitment and scouting platform connecting players, coaches, and clubs across the UK.',
     url: 'https://rugbyconnect.org',
-    tags: ['Platform', 'Realtime', 'Analytics'],
-    color: 'from-emerald-500/15 to-teal-500/10',
-    borderColor: 'hover:border-emerald-500/40',
+    tags: ['Web Platform', 'Real-time Data', 'Analytics'],
+    color: 'from-green-500/20 to-emerald-500/20',
+    borderColor: 'hover:border-green-500/40',
     image: rugbyconnectImg,
   },
   {
     title: 'Growing Futures Cornwall',
-    description: 'Education services platform for Cornwall families. Resource library, event booking, and a directory built around accessibility and search.',
+    description: 'An education services platform for Cornwall-based families, providing resources, event booking, and community connection.',
     url: 'https://growingfuturescornwall.com',
-    tags: ['Education', 'Booking', 'Directory'],
-    color: 'from-amber-500/15 to-yellow-500/10',
+    tags: ['Education', 'Booking System', 'Community'],
+    color: 'from-amber-500/20 to-yellow-500/20',
     borderColor: 'hover:border-amber-500/40',
     image: growingfuturesImg,
   },
   {
     title: 'Sensory Cove',
-    description: 'Site for a sensory space supporting people with ASD and SEMH needs. Designed accessibility-first: calm contrast, reduced motion, and screen-reader pass.',
+    description: 'A bespoke website for a sensory space supporting individuals with ASD and SEMH needs, with accessibility-first design.',
     url: 'https://sensorycove.co.uk',
     tags: ['Accessibility', 'Healthcare', 'Booking'],
-    color: 'from-violet-500/15 to-purple-500/10',
-    borderColor: 'hover:border-violet-500/40',
+    color: 'from-purple-500/20 to-violet-500/20',
+    borderColor: 'hover:border-purple-500/40',
     image: sensorycoveImg,
   },
   {
     title: 'Serenity Hypnotherapy',
-    description: 'Hypnotherapy app with session booking, a private audio library, and lightweight progress tracking. Streams sessions without ads or trackers.',
+    description: 'A modern hypnotherapy app with session booking, guided audio content, and progress tracking for therapeutic engagement.',
     url: '#',
-    tags: ['Mobile', 'Audio', 'Wellness'],
-    color: 'from-sky-500/15 to-cyan-500/10',
+    tags: ['Mobile App', 'Audio Content', 'Wellness'],
+    color: 'from-sky-500/20 to-cyan-500/20',
     borderColor: 'hover:border-sky-500/40',
     image: serenityImg,
   },
@@ -57,12 +57,12 @@ export default function PortfolioSection() {
           </RevealItem>
           <RevealItem>
             <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
-              Recent <span className="text-gradient">work</span>
+              Mission <span className="text-gradient">Logs</span>
             </h2>
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Four live sites across sport, education, healthcare, and wellness. Click through and click around.
+              Completed deployments for businesses across industries — each one built with AI precision.
             </p>
           </RevealItem>
         </StaggerContainer>

@@ -162,34 +162,34 @@ export default function HeroSection() {
             {/* Status badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-primary/30 text-xs font-mono-tech text-primary mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              3 project slots left for this month
+              ACCEPTING NEW PROJECTS &nbsp;·&nbsp; LIMITED SPOTS AVAILABLE
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight mb-6">
-              Studio-grade websites.
+              Smarter Websites.
               <br />
-              <span className="text-gradient">Built with AI.</span>
+              <span className="text-gradient">Expert Craftsmanship.</span>
             </h1>
 
             <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              AI does the heavy lifting on design, copy, and code. That is how
-              we ship sites at the quality of a traditional studio in a fraction
-              of the time, and for a fraction of the price.
+              We leverage the latest AI technology to design, build, and optimise
+              digital experiences for ambitious businesses — delivered faster, priced
+              fairly, and crafted by skilled professionals.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 active:scale-[0.98] transition-all duration-300 glow-static group"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all duration-300 glow-static group"
               >
-                Get a quote
+                Get Your Free Quote
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="#portfolio"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg glass border border-border hover:border-primary/40 text-foreground font-semibold transition-all duration-300 active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg glass border border-border hover:border-primary/40 text-foreground font-semibold transition-all duration-300"
               >
-                See live work
+                See Real Results
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="opacity-70"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
               </a>
             </div>
@@ -201,10 +201,10 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 1 }}
               className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl mx-auto glass rounded-2xl p-6 border border-border/50"
             >
-              <AnimatedCounter end={52} suffix="" label="Sites shipped" />
-              <AnimatedCounter end={97} suffix="%" label="Renewed scope" />
-              <AnimatedCounter end={11} suffix=" days" label="Avg. turnaround" />
-              <AnimatedCounter end={4} suffix=" yrs" label="In practice" />
+              <AnimatedCounter end={50} suffix="+" label="Projects" />
+              <AnimatedCounter end={99} suffix="%" label="Satisfaction" />
+              <AnimatedCounter end={3} suffix="x" label="Faster Dev" />
+              <AnimatedCounter end={24} suffix="/7" label="Support" />
             </motion.div>
           </motion.div>
 

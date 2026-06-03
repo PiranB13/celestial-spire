@@ -1,73 +1,72 @@
-import { Check, Type, LayoutDashboard, Boxes, Hexagon } from 'lucide-react';
+import { Check, FileText, Layers, Shield, Sparkles } from 'lucide-react';
 import { StaggerContainer, RevealItem } from './ScrollReveal';
 
 const tiers = [
   {
     name: 'Basic',
-    icon: Type,
-    price: 300,
-    description:
-      'A focused one-page site for freelancers, launches, and small ventures that need a strong first impression without the overhead.',
+    icon: FileText,
+    price: '300',
+    description: 'A striking, conversion-focused single page — perfect for freelancers, startups, or product launches that need to make an immediate impact.',
     features: [
-      'One bespoke page, fully responsive',
-      'AI-driven design and build',
-      'Core SEO and meta setup',
-      'Contact form with spam protection',
+      'AI-assisted design & development',
+      'Fully responsive across all devices',
+      'SEO foundations & meta optimisation',
+      'Integrated contact form',
+      'Expert review & quality assurance',
       '14-day post-launch support',
     ],
-    cta: 'Get a quote',
+    cta: 'Get Started',
     popular: false,
   },
   {
     name: 'Pro',
-    icon: LayoutDashboard,
-    price: 500,
-    description:
-      'A full website for businesses building a serious online presence. Structure, content management, and the polish to keep visitors moving.',
+    icon: Layers,
+    price: '500',
+    description: 'A comprehensive, professionally crafted website for businesses ready to establish a commanding online presence with room to grow.',
     features: [
       'Everything in Basic',
       'Up to 5 bespoke pages',
-      'Headless CMS so you can edit copy',
-      'Analytics and conversion tracking',
-      'Performance and Core Web Vitals tuning',
+      'Advanced SEO & analytics setup',
+      'Content management system',
+      'Performance & speed optimisation',
+      'Blog or news integration',
       '30-day priority support',
     ],
-    cta: 'Get a quote',
+    cta: 'Get Started',
     popular: false,
   },
   {
     name: 'Expert',
-    icon: Boxes,
-    price: 1000,
-    description:
-      'Custom platforms with real depth: interactive 3D scenes, client portals, or full e-commerce. Engineered to load fast and stay maintainable.',
+    icon: Shield,
+    price: '1,000',
+    description: 'Bespoke digital platforms — interactive 3D experiences, client portals, or full e-commerce — engineered with precision and built to scale with your business.',
     features: [
       'Everything in Pro',
       'Interactive 3D scenes or portal app',
-      'Storefront, checkout, and inventory',
-      'Authenticated user areas with roles',
-      'Third-party integrations (Stripe, CRMs, APIs)',
-      'Cloud hosting and CI deploy pipeline',
+      'E-commerce storefront & checkout',
+      'Custom business logic & workflows',
+      'Database & user management',
+      'Third-party API integrations',
+      'Cloud hosting & deployment',
       '90-day dedicated support',
     ],
-    cta: 'Get a quote',
+    cta: 'Get a Quote',
     popular: true,
   },
   {
     name: 'Full Brand',
-    icon: Hexagon,
-    price: 2000,
-    description:
-      'Brand identity built alongside the platform: logo system, type, palette, and voice, applied across the entire Expert build.',
+    icon: Sparkles,
+    price: '2,000',
+    description: 'Complete brand identity crafted alongside your digital platform — logo, typography, visual language, and voice — applied across the entire Expert build.',
     features: [
       'Everything in Expert',
-      'Logo system and visual identity',
-      'Type, colour, and motion guidelines',
-      'Brand voice and messaging framework',
-      'Social and marketing asset kit',
-      'Six months of evolutionary support',
+      'Logo system & visual identity',
+      'Typography & colour guidelines',
+      'Brand voice & messaging framework',
+      'Social & marketing asset kit',
+      '6 months of evolutionary support',
     ],
-    cta: 'Get a quote',
+    cta: 'Get a Quote',
     popular: false,
   },
 ];
@@ -83,27 +82,27 @@ export default function PricingSection() {
           </RevealItem>
           <RevealItem>
             <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
-              Honest pricing, <span className="text-gradient">no surprises</span>
+              Transparent <span className="text-gradient">Pricing</span>
             </h2>
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Four packages, four levels of ambition. Every tier ships with the same engineering bar; the difference is scope.
+              No hidden fees, no surprises. Choose the package that fits your goals — every tier includes AI-accelerated development with expert human oversight.
             </p>
           </RevealItem>
         </StaggerContainer>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start">
           {tiers.map((tier) => (
             <RevealItem key={tier.name} direction="up">
               <div
-                className={`relative flex flex-col h-full glass rounded-2xl p-7 ${
+                className={`relative glass rounded-2xl p-8 ${
                   tier.popular ? 'glow-border border-primary/40 lg:-mt-4 lg:mb-[-16px]' : 'border border-border/50'
                 } transition-all duration-500 hover:glow-border`}
               >
                 {tier.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold font-mono-tech tracking-wider">
-                    MOST CHOSEN
+                    MOST POPULAR
                   </div>
                 )}
                 <div className="flex items-center gap-3 mb-4">
@@ -113,21 +112,21 @@ export default function PricingSection() {
                   <h3 className="text-lg font-semibold text-foreground">{tier.name}</h3>
                 </div>
                 <div className="mb-4">
-                  <span className="text-3xl font-bold text-foreground tabular-nums">£{tier.price.toLocaleString()}</span>
+                  <span className="text-3xl font-bold text-foreground">£{tier.price}</span>
                   <span className="text-sm text-muted-foreground ml-1">starting</span>
                 </div>
-                <p className="text-sm text-muted-foreground mb-6 leading-relaxed text-pretty">{tier.description}</p>
+                <p className="text-sm text-muted-foreground mb-6 leading-relaxed">{tier.description}</p>
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
                       <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                      <span>{f}</span>
+                      {f}
                     </li>
                   ))}
                 </ul>
                 <a
                   href="#contact"
-                  className={`mt-auto block text-center py-3 rounded-lg text-sm font-semibold transition-all duration-300 active:scale-[0.98] ${
+                  className={`block text-center py-3 rounded-lg text-sm font-semibold transition-all duration-300 ${
                     tier.popular
                       ? 'bg-primary text-primary-foreground hover:bg-primary/90 glow-static'
                       : 'glass border border-border hover:border-primary/40 text-foreground'
@@ -139,10 +138,6 @@ export default function PricingSection() {
             </RevealItem>
           ))}
         </div>
-
-        <p className="text-center text-xs text-muted-foreground/70 mt-12 font-mono-tech tracking-wider uppercase">
-          Quoted in GBP · Final figure depends on scope · Nothing starts without a written estimate
-        </p>
       </div>
     </section>
   );

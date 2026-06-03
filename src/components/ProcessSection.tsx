@@ -5,26 +5,26 @@ const steps = [
   {
     number: '01',
     icon: Lightbulb,
-    title: 'Discovery',
-    description: 'A 30-minute call. You explain the business and the goal. We feed that brief into the AI design and research pipeline and come back with a written scope and a fixed quote.',
+    title: 'Discovery & Strategy',
+    description: 'We begin with a free consultation to understand your business, goals, and audience. Our team researches your market and competitors to define a clear digital strategy.',
   },
   {
     number: '02',
     icon: Cpu,
-    title: 'Design and build',
-    description: 'AI generates the design directions, the copy, and most of the code. We curate, refine, and lock everything to the brief. Days of progress, not weeks.',
+    title: 'AI-Powered Design & Build',
+    description: 'Using advanced AI tools, we generate bespoke designs, produce optimised content, and rapidly build your site or application — achieving in days what traditionally takes weeks.',
   },
   {
     number: '03',
     icon: Wrench,
-    title: 'Refinement',
-    description: 'Lighthouse audits, real-device testing, accessibility checks, copy passes, all automated then reviewed. You get a staging link to break things on. Nothing ships until you sign off.',
+    title: 'Expert Refinement & QA',
+    description: 'Every element is then reviewed and refined by our experienced developers and designers. We ensure pixel-perfect quality, accessibility compliance, and flawless performance.',
   },
   {
     number: '04',
     icon: Rocket,
-    title: 'Launch',
-    description: 'Deploy, DNS, analytics, search console. We stay on hand for the support window in your tier, and you keep full ownership of code, hosting, and accounts.',
+    title: 'Launch & Ongoing Support',
+    description: 'We handle deployment, analytics setup, and SEO configuration. After launch, we provide dedicated support and can continue enhancing your platform as your business grows.',
   },
 ];
 
@@ -39,12 +39,12 @@ export default function ProcessSection() {
           </RevealItem>
           <RevealItem>
             <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
-              How we <span className="text-gradient">work</span>
+              How We <span className="text-gradient">Work</span>
             </h2>
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              AI compresses what used to be weeks into days. Four stages, no surprises, the whole timeline fits on a calendar tab.
+              AI handles the heavy lifting. Our experts ensure the finished product is exceptional. Here's how we bring your project to life.
             </p>
           </RevealItem>
         </StaggerContainer>
