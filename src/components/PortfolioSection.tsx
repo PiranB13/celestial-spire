@@ -10,7 +10,7 @@ import serenityImg from '@/assets/portfolio-serenity.jpg';
 const projects = [
   {
     title: 'RugbyConnect',
-    description: 'A comprehensive rugby recruitment and scouting platform connecting players, coaches, and clubs across the UK.',
+    description: 'A recruitment and scouting platform for UK rugby. Players, coaches, and clubs use it to find each other and track who is doing what across the season.',
     url: 'https://rugbyconnect.org',
     tags: ['Web Platform', 'Real-time Data', 'Analytics'],
     color: 'from-green-500/20 to-emerald-500/20',
@@ -19,7 +19,7 @@ const projects = [
   },
   {
     title: 'Growing Futures Cornwall',
-    description: 'An education services platform for Cornwall-based families, providing resources, event booking, and community connection.',
+    description: 'Education services for Cornwall families. A resource library, event booking, and a way to plug into the community without scrolling through Facebook groups.',
     url: 'https://growingfuturescornwall.com',
     tags: ['Education', 'Booking System', 'Community'],
     color: 'from-amber-500/20 to-yellow-500/20',
@@ -28,7 +28,7 @@ const projects = [
   },
   {
     title: 'Sensory Cove',
-    description: 'A bespoke website for a sensory space supporting individuals with ASD and SEMH needs, with accessibility-first design.',
+    description: 'A site for a sensory space that supports people with ASD and SEMH needs. We built it accessibility-first from the start, not added on after.',
     url: 'https://sensorycove.co.uk',
     tags: ['Accessibility', 'Healthcare', 'Booking'],
     color: 'from-purple-500/20 to-violet-500/20',
@@ -37,7 +37,7 @@ const projects = [
   },
   {
     title: 'Serenity Hypnotherapy',
-    description: 'A modern hypnotherapy app with session booking, guided audio content, and progress tracking for therapeutic engagement.',
+    description: 'A hypnotherapy app with session booking, an audio library, and simple progress tracking. No ads, no algorithm, just the sessions you signed up for.',
     url: '#',
     tags: ['Mobile App', 'Audio Content', 'Wellness'],
     color: 'from-sky-500/20 to-cyan-500/20',
@@ -48,10 +48,10 @@ const projects = [
 
 export default function PortfolioSection() {
   return (
-    <section id="portfolio" className="relative py-24 lg:py-32">
+    <section id="portfolio" className="relative py-16 lg:py-24">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,hsl(var(--primary)/0.05),transparent_50%)]" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <StaggerContainer className="text-center mb-16">
+        <StaggerContainer className="text-center mb-12">
           <RevealItem>
             <span className="font-mono-tech text-xs text-primary tracking-widest uppercase">// Portfolio</span>
           </RevealItem>
@@ -62,7 +62,7 @@ export default function PortfolioSection() {
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Completed deployments for businesses across industries — each one built with AI precision.
+              A few live sites we have built. Click any of them to have a look around.
             </p>
           </RevealItem>
         </StaggerContainer>

@@ -172,9 +172,9 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              We leverage the latest AI technology to design, build, and optimise
-              digital experiences for ambitious businesses — delivered faster, priced
-              fairly, and crafted by skilled professionals.
+              We use AI to design, build, and tune websites for businesses
+              that want to grow. Faster than a traditional agency, priced
+              fairly, and put together properly.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">

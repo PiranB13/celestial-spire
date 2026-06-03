@@ -6,34 +6,34 @@ const steps = [
     number: '01',
     icon: Lightbulb,
     title: 'Discovery & Strategy',
-    description: 'We begin with a free consultation to understand your business, goals, and audience. Our team researches your market and competitors to define a clear digital strategy.',
+    description: 'A free 30-minute call. You walk us through the business, the goal, and who you are trying to reach. We come back the next day with a written scope and a fixed quote.',
   },
   {
     number: '02',
     icon: Cpu,
     title: 'AI-Powered Design & Build',
-    description: 'Using advanced AI tools, we generate bespoke designs, produce optimised content, and rapidly build your site or application — achieving in days what traditionally takes weeks.',
+    description: 'We use AI to draft designs, write the first pass of copy, and assemble the site. What used to take weeks in a studio now takes days, and you see progress every step of the way.',
   },
   {
     number: '03',
     icon: Wrench,
     title: 'Expert Refinement & QA',
-    description: 'Every element is then reviewed and refined by our experienced developers and designers. We ensure pixel-perfect quality, accessibility compliance, and flawless performance.',
+    description: 'We go through the build line by line. Visuals get checked, code gets reviewed, and we test on real devices and browsers. Nothing goes live until you have signed off.',
   },
   {
     number: '04',
     icon: Rocket,
     title: 'Launch & Ongoing Support',
-    description: 'We handle deployment, analytics setup, and SEO configuration. After launch, we provide dedicated support and can continue enhancing your platform as your business grows.',
+    description: 'We push the site live, hook up analytics, and submit to search. After launch we stay on hand for the support window in your tier, and you can keep us on a retainer if you want.',
   },
 ];
 
 export default function ProcessSection() {
   return (
-    <section id="process" className="relative py-24 lg:py-32">
+    <section id="process" className="relative py-16 lg:py-24">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.04),transparent_60%)]" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <StaggerContainer className="text-center mb-16">
+        <StaggerContainer className="text-center mb-12">
           <RevealItem>
             <span className="font-mono-tech text-xs text-primary tracking-widest uppercase">// Process</span>
           </RevealItem>
@@ -44,7 +44,7 @@ export default function ProcessSection() {
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              AI handles the heavy lifting. Our experts ensure the finished product is exceptional. Here's how we bring your project to life.
+              AI does the volume. We make sure what ends up on the site is actually good. Four steps from the first call to launch day.
             </p>
           </RevealItem>
         </StaggerContainer>

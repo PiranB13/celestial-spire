@@ -6,14 +6,14 @@ const tiers = [
     name: 'Basic',
     icon: FileText,
     price: '300',
-    description: 'A striking, conversion-focused single page — perfect for freelancers, startups, or product launches that need to make an immediate impact.',
+    description: 'A single page, built to convert. Good for freelancers, product launches, or a small business that does not need a full site yet.',
     features: [
-      'AI-assisted design & development',
-      'Fully responsive across all devices',
-      'SEO foundations & meta optimisation',
-      'Integrated contact form',
-      'Expert review & quality assurance',
-      '14-day post-launch support',
+      'AI-built, human-checked design',
+      'Works on phones and laptops',
+      'SEO and meta tags set up',
+      'Contact form that actually sends',
+      'Pre-launch QA pass',
+      '14 days of support after go-live',
     ],
     cta: 'Get Started',
     popular: false,
@@ -22,15 +22,15 @@ const tiers = [
     name: 'Pro',
     icon: Layers,
     price: '500',
-    description: 'A comprehensive, professionally crafted website for businesses ready to establish a commanding online presence with room to grow.',
+    description: 'A full website for businesses that need more than one page. Structure, a CMS, and the basics that let you keep editing without us.',
     features: [
       'Everything in Basic',
-      'Up to 5 bespoke pages',
-      'Advanced SEO & analytics setup',
-      'Content management system',
-      'Performance & speed optimisation',
-      'Blog or news integration',
-      '30-day priority support',
+      'Up to 5 pages',
+      'Full SEO and analytics setup',
+      'CMS so you can edit copy',
+      'Page speed and Core Web Vitals',
+      'Blog or news section',
+      '30 days of priority support',
     ],
     cta: 'Get Started',
     popular: false,
@@ -39,16 +39,16 @@ const tiers = [
     name: 'Expert',
     icon: Shield,
     price: '1,000',
-    description: 'Bespoke digital platforms — interactive 3D experiences, client portals, or full e-commerce — engineered with precision and built to scale with your business.',
+    description: 'Bigger builds with real depth: 3D scenes, client portals, or a proper e-commerce store. Made to handle traffic and grow as you do.',
     features: [
       'Everything in Pro',
-      'Interactive 3D scenes or portal app',
-      'E-commerce storefront & checkout',
-      'Custom business logic & workflows',
-      'Database & user management',
-      'Third-party API integrations',
-      'Cloud hosting & deployment',
-      '90-day dedicated support',
+      '3D scenes or full portal app',
+      'E-commerce store and checkout',
+      'Custom logic, workflows, roles',
+      'Database and user management',
+      'Stripe, CRM, and other APIs',
+      'Cloud hosting and deployment',
+      '90 days of dedicated support',
     ],
     cta: 'Get a Quote',
     popular: true,
@@ -57,14 +57,14 @@ const tiers = [
     name: 'Full Brand',
     icon: Sparkles,
     price: '2,000',
-    description: 'Complete brand identity crafted alongside your digital platform — logo, typography, visual language, and voice — applied across the entire Expert build.',
+    description: 'Brand identity built at the same time as the platform. Logo, type, palette, voice, and how all of it shows up across every page of the Expert build.',
     features: [
       'Everything in Expert',
-      'Logo system & visual identity',
-      'Typography & colour guidelines',
-      'Brand voice & messaging framework',
-      'Social & marketing asset kit',
-      '6 months of evolutionary support',
+      'Logo system and identity',
+      'Type, colour, and motion rules',
+      'Brand voice and messaging guide',
+      'Social and marketing asset kit',
+      '6 months of ongoing support',
     ],
     cta: 'Get a Quote',
     popular: false,
@@ -73,10 +73,10 @@ const tiers = [
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="relative py-24 lg:py-32">
+    <section id="pricing" className="relative py-16 lg:py-24">
       <div className="absolute inset-0 bg-grid opacity-10" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <StaggerContainer className="text-center mb-16">
+        <StaggerContainer className="text-center mb-12">
           <RevealItem>
             <span className="font-mono-tech text-xs text-primary tracking-widest uppercase">// Pricing</span>
           </RevealItem>
@@ -87,7 +87,7 @@ export default function PricingSection() {
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              No hidden fees, no surprises. Choose the package that fits your goals — every tier includes AI-accelerated development with expert human oversight.
+              Fixed prices, agreed in writing. Pick the package that fits. Every tier is built with AI and reviewed by a person before it goes out.
             </p>
           </RevealItem>
         </StaggerContainer>

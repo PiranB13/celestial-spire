@@ -5,29 +5,29 @@ const services = [
   {
     icon: Globe,
     title: 'Website Creation',
-    description: 'From first concept to final launch — we harness AI to analyse your market, generate bespoke designs, and build high-performance websites. Every pixel is then refined by our team to ensure it truly represents your brand.',
-    features: ['Bespoke AI-generated design', 'Search engine optimisation built in', 'Fully responsive across all devices', 'Content management system included'],
+    description: 'Start to finish. We run AI through your market and brand to draft a few directions, then build it out as a real working site. Everything gets a pass before launch so it looks like your business, not a template.',
+    features: ['Custom design, not a template', 'SEO and meta set up properly', 'Works on phones, tablets, and desktop', 'CMS so you can edit without us'],
   },
   {
     icon: Zap,
     title: 'Redesign & Optimisation',
-    description: 'Transform an underperforming website into a powerful business asset. Our AI audits your current site for speed, UX, and accessibility issues — then our developers implement targeted improvements that deliver measurable results.',
-    features: ['Core Web Vitals optimisation', 'Modern UX/UI overhaul', 'WCAG accessibility compliance', 'Advanced analytics & tracking'],
+    description: "Your site loads slow, looks dated, or isn't pulling visitors in. We run an AI audit on speed, layout, and accessibility, then fix the things that are actually costing you traffic and conversions.",
+    features: ['Core Web Vitals and page speed', 'UX clean-up where it matters', 'WCAG accessibility pass', 'Analytics and event tracking'],
   },
   {
     icon: Code2,
     title: 'Custom Software & Portals',
-    description: 'Need more than a website? We design and develop bespoke applications — client portals, booking platforms, internal tools — using AI to accelerate delivery without compromising on quality or security.',
-    features: ['End-to-end application development', 'Secure user authentication & portals', 'Third-party API integration', 'Scalable cloud infrastructure'],
+    description: 'Need more than a static site? Client portals, booking systems, retail storefronts, internal dashboards. AI speeds up the build, the code is solid, and you keep full ownership when we hand over.',
+    features: ['Full apps, not glued-together plugins', 'Logins, roles, and user areas', 'Stripe, calendars, CRM integrations', 'Cloud hosting set up for you'],
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="relative py-24 lg:py-32">
+    <section id="services" className="relative py-16 lg:py-24">
       <div className="absolute inset-0 bg-grid opacity-10" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <StaggerContainer className="text-center mb-16">
+        <StaggerContainer className="text-center mb-12">
           <RevealItem>
             <span className="font-mono-tech text-xs text-primary tracking-widest uppercase">// Services</span>
           </RevealItem>
@@ -38,7 +38,7 @@ export default function ServicesSection() {
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              AI-accelerated development, guided by experienced professionals. We deliver premium digital solutions at a fraction of the traditional cost and timeline.
+              AI does the heavy lifting. We keep an eye on quality. You get a good website for less money and in less time than a traditional agency takes.
             </p>
           </RevealItem>
         </StaggerContainer>

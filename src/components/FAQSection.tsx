@@ -5,27 +5,27 @@ import { StaggerContainer, RevealItem } from './ScrollReveal';
 const faqs = [
   {
     q: 'How long does it take to build a website?',
-    a: 'A Basic single-page site typically takes 3–5 working days. A Pro multi-page site takes 1–2 weeks. Expert builds with 3D, portals, or retail are scoped individually, typically 4–8 weeks. Full Brand engagements add roughly 2 weeks for the identity work. AI dramatically accelerates our workflow compared to traditional agencies.',
+    a: 'Basic (one page) usually takes 3 to 5 working days. Pro (up to 5 pages) is 1 to 2 weeks. Expert builds with 3D, portals, or e-commerce are quoted per project and usually run 4 to 8 weeks. Full Brand adds about 2 weeks on top for the identity work.',
   },
   {
     q: 'How much does a website cost?',
-    a: 'Our pricing starts at £300 for Basic (single page), £500 for Pro (up to 5 pages), £1,000 for Expert (3D, portals, and retail), and £2,000 for Full Brand (identity plus everything in Expert). All prices are fixed-fee — no hidden costs, no surprises.',
+    a: 'Basic starts at £300, Pro at £500, Expert at £1,000, and Full Brand at £2,000. Whatever we agree is the price; there are no surprise invoices at the end.',
   },
   {
     q: 'Do you use AI to build websites?',
-    a: 'Yes. We use AI tools to accelerate design generation, content creation, and code production — achieving in days what traditionally takes weeks. Every output is reviewed and refined by our experienced developers to ensure quality.',
+    a: "Yes. We use AI for design drafts, content, and most of the code. A real person goes through the build before it ships, so you get the speed without the slop you usually get from AI-only work.",
   },
   {
     q: 'What is included in the price?',
-    a: 'All packages include AI-assisted design and development, fully responsive layouts, SEO foundations, an integrated contact form, expert QA review, and post-launch support. Pro adds a CMS and analytics; Expert adds 3D, portals, or retail features; Full Brand adds full identity work — see our pricing section.',
+    a: 'Every package: custom design, responsive layout, SEO setup, contact form, a QA pass, and post-launch support. Pro adds a CMS and analytics. Expert adds 3D, portals, or e-commerce. Full Brand adds full identity work. See the pricing section for the full split.',
   },
   {
     q: 'Do you offer ongoing support after launch?',
-    a: 'Yes. All packages include post-launch support: 14 days for Basic, 30 days for Pro, 90 days for Expert, and 6 months for Full Brand. Ongoing maintenance retainers are also available on request.',
+    a: 'Yes. Basic gets 14 days, Pro gets 30, Expert gets 90, Full Brand gets 6 months. After that you can put us on a maintenance retainer or take everything in-house. Either is fine.',
   },
   {
     q: 'Can you redesign my existing website?',
-    a: 'Absolutely. Our redesign and optimisation service audits your current site for speed, UX, and accessibility issues, then implements targeted improvements. We can also migrate your content to a new, modern platform.',
+    a: 'Yes. We audit your current site for speed, layout, and accessibility, then fix the parts that are actually hurting it. If you need to move to a different platform we handle the migration too.',
   },
 ];
 
@@ -58,9 +58,9 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQSection() {
   return (
-    <section id="faq" className="relative py-24 lg:py-32">
+    <section id="faq" className="relative py-16 lg:py-24">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <StaggerContainer className="text-center mb-16">
+        <StaggerContainer className="text-center mb-12">
           <RevealItem>
             <span className="font-mono-tech text-xs text-primary tracking-widest uppercase">// FAQ</span>
           </RevealItem>
@@ -71,8 +71,8 @@ export default function FAQSection() {
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Everything you need to know before getting started. Can't find what you're looking for?{' '}
-              <a href="#contact" className="text-primary hover:underline">Just ask us.</a>
+              The stuff people actually ask before signing. Anything missing?{' '}
+              <a href="#contact" className="text-primary hover:underline">Drop us a note.</a>
             </p>
           </RevealItem>
         </StaggerContainer>

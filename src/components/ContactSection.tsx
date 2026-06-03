@@ -13,10 +13,10 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-24 lg:py-32">
+    <section id="contact" className="relative py-16 lg:py-24">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.05),transparent_50%)]" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <StaggerContainer className="text-center mb-16">
+        <StaggerContainer className="text-center mb-12">
           <RevealItem>
             <span className="font-mono-tech text-xs text-primary tracking-widest uppercase">// Contact</span>
           </RevealItem>
@@ -27,7 +27,7 @@ export default function ContactSection() {
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Ready to elevate your digital presence? Tell us about your project and we'll respond within 24 hours with a tailored proposal.
+              Tell us what you are building. We will get back to you within 24 hours with a quote and a starting plan.
             </p>
           </RevealItem>
         </StaggerContainer>
@@ -105,7 +105,7 @@ export default function ContactSection() {
               </div>
               <div className="glass rounded-2xl p-6 border border-border/50">
                 <h3 className="font-semibold text-foreground mb-2">Quick Turnaround</h3>
-                <p className="text-sm text-muted-foreground mb-4">We respond within 24 hours with a detailed, no-obligation proposal tailored to your requirements.</p>
+                <p className="text-sm text-muted-foreground mb-4">We reply within 24 hours with a quote and what we would do first. No pressure to sign anything.</p>
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                   <span className="text-xs font-mono-tech text-primary">Currently accepting new projects</span>
@@ -113,7 +113,7 @@ export default function ContactSection() {
               </div>
               <div className="glass rounded-2xl p-6 border border-border/50">
                 <h3 className="font-semibold text-foreground mb-2">Free Consultation</h3>
-                <p className="text-sm text-muted-foreground">Every engagement begins with a complimentary 30-minute discovery call — no obligations, just honest, expert advice.</p>
+                <p className="text-sm text-muted-foreground">Every project starts with a free 30-minute call. No sales pitch, just straight answers about what you actually need.</p>
               </div>
             </div>
           </RevealItem>
