@@ -47,10 +47,11 @@ function useScrollProgress(ref: React.RefObject<HTMLElement | null>) {
     const handleScroll = () => {
       if (!ref.current) return;
       const rect = ref.current.getBoundingClientRect();
-      const sectionHeight = rect.height;
-      // Progress goes from 0 (top of section visible) to 1 (bottom of section leaving viewport)
+      const viewportH = window.innerHeight;
+      // Total scrollable distance while the sticky child stays pinned
+      const stickyRange = Math.max(1, rect.height - viewportH);
       const scrolled = -rect.top;
-      const p = Math.max(0, Math.min(1, scrolled / (sectionHeight * 0.6)));
+      const p = Math.max(0, Math.min(1, scrolled / stickyRange));
       setProgress(p);
     };
 
@@ -66,14 +67,18 @@ export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const scrollProgress = useScrollProgress(sectionRef);
 
-  // Brain: fully visible at 0, fades out quickly
-  const brainOpacity = Math.max(0, 1 - scrollProgress * 5);
-  const brainScale = 1 + scrollProgress * 0.5;
-  const brainRotate = scrollProgress * 25;
-  const brainBlur = scrollProgress * 16;
+  // Morph completes within the first ~70% of the pinned scroll range,
+  // so the image transforms in place before the page continues moving.
+  const morphProgress = Math.min(1, scrollProgress / 0.7);
 
-  // Data: fades in early and fast
-  const dataProgress = Math.max(0, Math.min(1, (scrollProgress - 0.08) / 0.2));
+  // Brain: fully visible at 0, fades out over first half of morph
+  const brainOpacity = Math.max(0, 1 - morphProgress * 2);
+  const brainScale = 1 + morphProgress * 0.5;
+  const brainRotate = morphProgress * 25;
+  const brainBlur = morphProgress * 16;
+
+  // Microchip: fades in during the second half of the morph
+  const dataProgress = Math.max(0, Math.min(1, (morphProgress - 0.4) / 0.5));
   const dataOpacity = dataProgress;
   const dataScale = 0.7 + dataProgress * 0.3;
   const dataRotate = (1 - dataProgress) * -20;
