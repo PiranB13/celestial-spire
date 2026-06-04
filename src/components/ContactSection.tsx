@@ -1,15 +1,47 @@
 import { motion } from 'framer-motion';
-import { Send, Mail, Phone } from 'lucide-react';
+import { Send, Mail, Phone, Loader2 } from 'lucide-react';
 import { useState } from 'react';
-import { StaggerContainer, RevealItem, itemFromLeft, itemFromRight } from './ScrollReveal';
+import { z } from 'zod';
+import { StaggerContainer, RevealItem } from './ScrollReveal';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, 'Name is required').max(100),
+  email: z.string().trim().email('Invalid email').max(255),
+  industry: z.string().trim().max(100).optional(),
+  budget: z.string().trim().max(50).optional(),
+  message: z.string().trim().max(1000).optional(),
+});
 
 export default function ContactSection() {
+  const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [form, setForm] = useState({ name: '', email: '', industry: '', budget: '', message: '' });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const update = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
+    setForm((f) => ({ ...f, [k]: e.target.value }));
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    const parsed = contactSchema.safeParse(form);
+    if (!parsed.success) {
+      toast({ title: 'Please check your details', description: parsed.error.issues[0].message, variant: 'destructive' });
+      return;
+    }
+    setSubmitting(true);
+    try {
+      const { error } = await supabase.functions.invoke('send-contact-email', { body: parsed.data });
+      if (error) throw error;
+      setSubmitted(true);
+      setForm({ name: '', email: '', industry: '', budget: '', message: '' });
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      console.error(err);
+      toast({ title: 'Could not send', description: 'Please try again or email us directly.', variant: 'destructive' });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
