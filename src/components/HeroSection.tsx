@@ -201,7 +201,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 1 }}
               className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl mx-auto glass rounded-2xl p-6 border border-border/50"
             >
-              <AnimatedCounter end={11} suffix=" days" label="Avg Build Time" />
+              <AnimatedCounter end={11} suffix=" Days" label="Avg Build Time" />
               <AnimatedCounter end={100} suffix="%" label="Satisfaction" />
               <AnimatedCounter end={10} suffix="x" label="Faster Dev" />
               <AnimatedCounter end={24} suffix="/7" label="Support" />
