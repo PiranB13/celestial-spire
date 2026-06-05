@@ -7,3 +7,7 @@ AI Web Solutions designs, builds, and tunes websites for businesses that want to
 ## Pages
 
 - [Home](/): Services, process, portfolio, pricing, FAQ, and contact.
+
+## Guides
+
+- [DIY vs. Hire a Pro](/guides/build-vs-hire): How to build a website — comparing DIY builders against a professional agency on time, cost, and quality.

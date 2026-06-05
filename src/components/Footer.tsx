@@ -17,10 +17,11 @@ const Footer = () => (
           <span className="font-semibold text-foreground text-sm">AI Web Solutions</span>
         </div>
         <div className="flex items-center gap-6 text-sm text-muted-foreground">
-          <a href="#services" className="hover:text-primary transition-colors">Services</a>
-          <a href="#portfolio" className="hover:text-primary transition-colors">Portfolio</a>
-          <a href="#pricing" className="hover:text-primary transition-colors">Pricing</a>
-          <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+          <a href="/#services" className="hover:text-primary transition-colors">Services</a>
+          <a href="/#portfolio" className="hover:text-primary transition-colors">Portfolio</a>
+          <a href="/#pricing" className="hover:text-primary transition-colors">Pricing</a>
+          <a href="/guides/build-vs-hire" className="hover:text-primary transition-colors">Guide</a>
+          <a href="/#contact" className="hover:text-primary transition-colors">Contact</a>
         </div>
         <p className="text-xs text-muted-foreground font-mono-tech">
           Crafted with care · © {new Date().getFullYear()}
