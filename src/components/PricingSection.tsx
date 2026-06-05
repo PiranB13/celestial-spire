@@ -87,7 +87,7 @@ export default function PricingSection() {
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Fixed prices, agreed in writing. Pick the package that fits. Every tier is reviewed end-to-end by a person before it goes out.
+              Clear starting prices, agreed in writing before we begin. Final quote depends on the specifics of your build, with no surprise invoices at the end.
             </p>
           </RevealItem>
         </StaggerContainer>
