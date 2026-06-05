@@ -1,0 +1,9 @@
+# AI Web Solutions
+
+> Web design and development agency that delivers expert-grade websites for businesses with a modern toolchain, fixed starting prices, and an average lead time of 11 days.
+
+AI Web Solutions designs, builds, and tunes websites for businesses that want to grow. Every build is hand-reviewed by a person before it ships. Packages range from a single-page Basic site to multi-page Pro builds, Expert builds with 3D / portals / e-commerce, and a Full Brand identity tier.
+
+## Pages
+
+- [Home](/): Services, process, portfolio, pricing, FAQ, and contact.
