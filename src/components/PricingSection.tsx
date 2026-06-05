@@ -8,7 +8,7 @@ const tiers = [
     price: '300',
     description: 'A single page, built to convert. Good for freelancers, product launches, or a small business that does not need a full site yet.',
     features: [
-      'AI-built, human-checked design',
+      'Custom design, hand-reviewed',
       'Works on phones and laptops',
       'SEO and meta tags set up',
       'Contact form that actually sends',
@@ -87,7 +87,7 @@ export default function PricingSection() {
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Fixed prices, agreed in writing. Pick the package that fits. Every tier is built with AI and reviewed by a person before it goes out.
+              Fixed prices, agreed in writing. Pick the package that fits. Every tier is reviewed end-to-end by a person before it goes out.
             </p>
           </RevealItem>
         </StaggerContainer>

@@ -23,7 +23,7 @@ const Footer = () => (
           <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
         </div>
         <p className="text-xs text-muted-foreground font-mono-tech">
-          Built with AI · © {new Date().getFullYear()}
+          Crafted with care · © {new Date().getFullYear()}
         </p>
       </div>
     </div>
