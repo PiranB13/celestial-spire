@@ -12,8 +12,8 @@ const faqs = [
     a: 'Basic starts at £300, Pro at £500, Expert at £1,000, and Full Brand at £2,000. Whatever we agree is the price; there are no surprise invoices at the end.',
   },
   {
-    q: 'Do you use AI to build websites?',
-    a: "Yes. We use AI for design drafts, content, and most of the code. A real person goes through the build before it ships, so you get the speed without the slop you usually get from AI-only work.",
+    q: 'How do you deliver so fast?',
+    a: "We use a modern toolchain that handles a lot of the repetitive work, which lets us focus on design, strategy, and quality. Every build is hand-reviewed and refined by a person before it ships, so you get the speed of modern tools with the polish of a proper studio.",
   },
   {
     q: 'What is included in the price?',

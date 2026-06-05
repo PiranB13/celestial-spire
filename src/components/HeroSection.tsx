@@ -172,9 +172,9 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              We use AI to design, build, and tune websites for businesses
-              that want to grow. Faster than a traditional agency, priced
-              fairly, and put together properly.
+              We design, build, and tune websites for businesses that want to grow.
+              Modern tooling lets us deliver expert-grade sites in a fraction of the
+              time a traditional agency takes, at a fair fixed price.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">

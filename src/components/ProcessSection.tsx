@@ -11,8 +11,8 @@ const steps = [
   {
     number: '02',
     icon: Cpu,
-    title: 'AI-Powered Design & Build',
-    description: 'We use AI to draft designs, write the first pass of copy, and assemble the site. What used to take weeks in a studio now takes days, and you see progress every step of the way.',
+    title: 'Design & Build',
+    description: 'We draft designs, shape the first pass of copy, and assemble the site using a modern toolchain that compresses weeks of studio work into days. You see progress every step of the way.',
   },
   {
     number: '03',
@@ -44,7 +44,7 @@ export default function ProcessSection() {
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              AI does the volume. We make sure what ends up on the site is actually good. Four steps from the first call to launch day.
+              A streamlined process that gets you from first call to launch day in a fraction of the usual time, without cutting corners on quality.
             </p>
           </RevealItem>
         </StaggerContainer>

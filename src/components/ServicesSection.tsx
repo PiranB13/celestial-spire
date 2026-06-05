@@ -5,19 +5,19 @@ const services = [
   {
     icon: Globe,
     title: 'Website Creation',
-    description: 'Start to finish. We run AI through your market and brand to draft a few directions, then build it out as a real working site. Everything gets a pass before launch so it looks like your business, not a template.',
+    description: 'Start to finish. We research your market and brand, draft a few directions, and build it out as a real working site. Everything gets a hands-on pass before launch so it looks like your business, not a template.',
     features: ['Custom design, not a template', 'SEO and meta set up properly', 'Works on phones, tablets, and desktop', 'CMS so you can edit without us'],
   },
   {
     icon: Zap,
     title: 'Redesign & Optimisation',
-    description: "Your site loads slow, looks dated, or isn't pulling visitors in. We run an AI audit on speed, layout, and accessibility, then fix the things that are actually costing you traffic and conversions.",
+    description: "Your site loads slow, looks dated, or isn't pulling visitors in. We audit speed, layout, and accessibility, then fix the things that are actually costing you traffic and conversions.",
     features: ['Core Web Vitals and page speed', 'UX clean-up where it matters', 'WCAG accessibility pass', 'Analytics and event tracking'],
   },
   {
     icon: Code2,
     title: 'Custom Software & Portals',
-    description: 'Need more than a static site? Client portals, booking systems, retail storefronts, internal dashboards. AI speeds up the build, the code is solid, and you keep full ownership when we hand over.',
+    description: 'Need more than a static site? Client portals, booking systems, retail storefronts, internal dashboards. Built fast, with solid code, and you keep full ownership when we hand over.',
     features: ['Full apps, not glued-together plugins', 'Logins, roles, and user areas', 'Stripe, calendars, CRM integrations', 'Cloud hosting set up for you'],
   },
 ];
@@ -38,7 +38,7 @@ export default function ServicesSection() {
           </RevealItem>
           <RevealItem>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              AI does the heavy lifting. We keep an eye on quality. You get a good website for less money and in less time than a traditional agency takes.
+              Expert craftsmanship, delivered in a fraction of the time. You get a polished website for less money and in less time than a traditional agency takes.
             </p>
           </RevealItem>
         </StaggerContainer>
