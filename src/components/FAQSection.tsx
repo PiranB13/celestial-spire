@@ -5,7 +5,7 @@ import { StaggerContainer, RevealItem } from './ScrollReveal';
 const faqs = [
   {
     q: 'How long does it take to build a website?',
-    a: 'Basic (one page) usually takes 3 to 5 working days. Pro (up to 5 pages) is 1 to 2 weeks. Expert builds with 3D, portals, or e-commerce are quoted per project and usually run 4 to 8 weeks. Full Brand adds about 2 weeks on top for the identity work.',
+    a: 'Basic (one page) usually takes 3 to 5 working days. Pro (up to 5 pages) is around 1 to 2 weeks. Expert builds with 3D, portals, or e-commerce typically run 2 to 3 weeks depending on scope. Full Brand adds about a week on top for the identity work. Average lead time across all projects is around 11 days.',
   },
   {
     q: 'How much does a website cost?',
