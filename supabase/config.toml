@@ -13,7 +13,5 @@ project_id = "eqmngguavbnwbtmylqsf"
     verify_jwt = true
   [functions.send-contact-email]
     verify_jwt = false
-  [functions.send-outreach-email]
-    verify_jwt = true
   [functions.send-transactional-email]
     verify_jwt = true
