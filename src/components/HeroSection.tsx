@@ -202,7 +202,7 @@ export default function HeroSection() {
               className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl mx-auto glass rounded-2xl p-6 border border-border/50"
             >
               <AnimatedCounter end={50} suffix="+" label="Projects" />
-              <AnimatedCounter end={99} suffix="%" label="Satisfaction" />
+              <AnimatedCounter end={100} suffix="%" label="Satisfaction" />
               <AnimatedCounter end={3} suffix="x" label="Faster Dev" />
               <AnimatedCounter end={24} suffix="/7" label="Support" />
             </motion.div>

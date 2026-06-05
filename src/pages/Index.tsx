@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import TrustBar from "@/components/TrustBar";
+
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import PortfolioSection from "@/components/PortfolioSection";
@@ -14,7 +14,7 @@ const Index = () => {
     <div className="min-h-dvh bg-background text-foreground overflow-x-clip">
       <Navbar />
       <HeroSection />
-      <TrustBar />
+      
       <ServicesSection />
       <ProcessSection />
       <PortfolioSection />
