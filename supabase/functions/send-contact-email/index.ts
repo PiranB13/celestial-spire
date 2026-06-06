@@ -6,17 +6,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-interface Payload {
-  name: string;
-  email: string;
-  industry?: string;
-  budget?: string;
-  message?: string;
-}
-
 const RECIPIENT = "piranbeumkes13@gmail.com";
-
-const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]!));
 
 const contactSchema = z.object({
   name: z.string().trim().min(1).max(100),
