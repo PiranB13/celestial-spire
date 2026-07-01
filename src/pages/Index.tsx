@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-
+import TrustBar from "@/components/TrustBar";
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import PortfolioSection from "@/components/PortfolioSection";
@@ -83,11 +83,17 @@ const Index = () => {
   return (
     <div className="min-h-dvh bg-background text-foreground overflow-x-clip">
       <Helmet>
-        <title>AI Web Solutions — Smarter Websites & Expert Web Design</title>
-        <meta name="description" content="AI Web Solutions designs and builds expert-grade websites for businesses. Fast delivery, fixed starting prices, and modern craftsmanship for growth." />
+        <title>AI Web Solutions — Expert Web Design & Development, Delivered in Days</title>
+        <meta
+          name="description"
+          content="Professional web design and development for UK small businesses. Custom websites, redesigns, e-commerce and portals — fixed prices from £300, average delivery in 11 days."
+        />
         <link rel="canonical" href="https://aiwebsolution.lovable.app/" />
-        <meta property="og:title" content="AI Web Solutions — Smarter Websites & Expert Web Design" />
-        <meta property="og:description" content="AI Web Solutions designs and builds expert-grade websites for businesses with fast delivery and clear starting prices." />
+        <meta property="og:title" content="AI Web Solutions — Expert Web Design & Development, Delivered in Days" />
+        <meta
+          property="og:description"
+          content="Custom websites, redesigns, e-commerce and portals for UK small businesses. Fixed prices from £300, average delivery in 11 days."
+        />
         <meta property="og:url" content="https://aiwebsolution.lovable.app/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
@@ -96,15 +102,16 @@ const Index = () => {
         ))}
       </Helmet>
       <Navbar />
-      <HeroSection />
-
-      
-      <ServicesSection />
-      <ProcessSection />
-      <PortfolioSection />
-      <PricingSection />
-      <FAQSection />
-      <ContactSection />
+      <main id="main">
+        <HeroSection />
+        <TrustBar />
+        <ServicesSection />
+        <ProcessSection />
+        <PortfolioSection />
+        <PricingSection />
+        <FAQSection />
+        <ContactSection />
+      </main>
       <Footer />
     </div>
   );

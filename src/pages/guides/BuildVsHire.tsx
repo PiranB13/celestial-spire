@@ -64,7 +64,7 @@ export default function BuildVsHire() {
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
-      <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" aria-hidden="true" />
 
       <article className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <Link

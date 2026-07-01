@@ -1,5 +1,6 @@
 import { Check, FileText, Layers, Shield, Sparkles } from 'lucide-react';
 import { StaggerContainer, RevealItem } from './ScrollReveal';
+import SectionHeading from './SectionHeading';
 
 const tiers = [
   {
@@ -15,7 +16,7 @@ const tiers = [
       'Pre-launch QA pass',
       '14 days of support after go-live',
     ],
-    cta: 'Get Started',
+    cta: 'Get started',
     popular: false,
   },
   {
@@ -32,7 +33,7 @@ const tiers = [
       'Blog or news section',
       '30 days of priority support',
     ],
-    cta: 'Get Started',
+    cta: 'Get started',
     popular: false,
   },
   {
@@ -50,7 +51,7 @@ const tiers = [
       'Cloud hosting and deployment',
       '90 days of dedicated support',
     ],
-    cta: 'Get a Quote',
+    cta: 'Get a quote',
     popular: true,
   },
   {
@@ -66,78 +67,76 @@ const tiers = [
       'Social and marketing asset kit',
       '6 months of ongoing support',
     ],
-    cta: 'Get a Quote',
+    cta: 'Get a quote',
     popular: false,
   },
 ];
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="relative py-16 lg:py-24">
-      <div className="absolute inset-0 bg-grid opacity-10" />
+    <section id="pricing" aria-labelledby="pricing-heading" className="relative py-20 lg:py-28">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <StaggerContainer className="text-center mb-12">
-          <RevealItem>
-            <span className="font-mono-tech text-xs text-primary tracking-widest uppercase">// Pricing</span>
-          </RevealItem>
-          <RevealItem>
-            <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
-              Transparent <span className="text-gradient">Pricing</span>
-            </h2>
-          </RevealItem>
-          <RevealItem>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Clear starting prices, agreed in writing before we begin. Final quote depends on the specifics of your build, with no surprise invoices at the end.
-            </p>
-          </RevealItem>
-        </StaggerContainer>
+        <SectionHeading
+          eyebrow="Pricing"
+          title={<span id="pricing-heading">Website design <span className="text-gradient">pricing</span></span>}
+          description="Clear starting prices, agreed in writing before we begin. Final quote depends on the specifics of your build, with no surprise invoices at the end."
+        />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start">
+        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
           {tiers.map((tier) => (
-            <RevealItem key={tier.name} direction="up">
-              <div
-                className={`relative glass rounded-2xl p-8 ${
-                  tier.popular ? 'glow-border border-primary/40 lg:-mt-4 lg:mb-[-16px]' : 'border border-border/50'
-                } transition-all duration-500 hover:glow-border`}
+            <RevealItem key={tier.name} direction="up" className="h-full">
+              <article
+                className={`relative glass card-hover rounded-2xl p-8 h-full flex flex-col ${
+                  tier.popular ? 'glow-border border-primary/40' : ''
+                }`}
               >
                 {tier.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold font-mono-tech tracking-wider">
+                  <p className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold font-mono-tech tracking-wider whitespace-nowrap">
                     MOST POPULAR
-                  </div>
+                  </p>
                 )}
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
-                    <tier.icon className="w-5 h-5 text-primary" />
+                    <tier.icon className="w-5 h-5 text-primary" aria-hidden="true" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground">{tier.name}</h3>
                 </div>
-                <div className="mb-4">
+                <p className="mb-4">
                   <span className="text-3xl font-bold text-foreground">£{tier.price}</span>
-                  <span className="text-sm text-muted-foreground ml-1">starting</span>
-                </div>
+                  <span className="text-sm text-muted-foreground ml-1.5">starting</span>
+                </p>
                 <p className="text-sm text-muted-foreground mb-6 leading-relaxed">{tier.description}</p>
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                      <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" aria-hidden="true" />
                       {f}
                     </li>
                   ))}
                 </ul>
                 <a
                   href="#contact"
-                  className={`block text-center py-3 rounded-lg text-sm font-semibold transition-all duration-300 ${
+                  className={`block text-center py-3 rounded-lg text-sm font-semibold transition-colors duration-300 mt-auto ${
                     tier.popular
                       ? 'bg-primary text-primary-foreground hover:bg-primary/90 glow-static'
-                      : 'glass border border-border hover:border-primary/40 text-foreground'
+                      : 'glass hover:border-primary/40 text-foreground'
                   }`}
                 >
                   {tier.cta}
+                  <span className="sr-only"> — {tier.name} package</span>
                 </a>
-              </div>
+              </article>
             </RevealItem>
           ))}
-        </div>
+        </StaggerContainer>
+
+        <p className="text-center text-sm text-muted-foreground mt-10">
+          Not sure whether to build it yourself or hire us?{' '}
+          <a href="/guides/build-vs-hire" className="text-primary hover:underline font-medium">
+            Read our DIY vs. professional agency guide
+          </a>
+          .
+        </p>
       </div>
     </section>
   );

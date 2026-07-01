@@ -1,19 +1,23 @@
-export default function TrustBar() {
-  const clients = ['RugbyConnect', 'Growing Futures Cornwall', 'Sensory Cove', 'Serenity Hypnotherapy'];
+const clients = ['RugbyConnect', 'Growing Futures Cornwall', 'Sensory Cove', 'Serenity Hypnotherapy'];
 
+export default function TrustBar() {
   return (
-    <div className="bg-background/85 backdrop-blur-xl border-t border-border/50 border-b py-3.5 px-10">
-      <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-4">
-        <div className="flex items-center gap-8 flex-wrap">
-          <span className="font-mono-tech text-[10px] text-muted-foreground tracking-widest uppercase">Trusted by</span>
+    <div className="border-y border-border/50 bg-card/30 py-5" aria-label="Clients we have worked with">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center lg:justify-between flex-wrap gap-x-10 gap-y-3">
+        <span className="font-mono-tech text-[11px] text-muted-foreground tracking-widest uppercase">
+          Trusted by
+        </span>
+        <ul className="flex items-center gap-x-10 gap-y-2 flex-wrap list-none">
           {clients.map((name) => (
-            <span key={name} className="text-sm font-semibold text-white/30">{name}</span>
+            <li key={name} className="text-sm font-semibold text-foreground/40">{name}</li>
           ))}
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-primary animate-pulse flex-shrink-0" />
-          <span className="font-mono-tech text-[10px] text-primary tracking-widest">3 PROJECT SPOTS OPEN THIS MONTH</span>
-        </div>
+        </ul>
+        <span className="hidden lg:inline-flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" aria-hidden="true" />
+          <span className="font-mono-tech text-[11px] text-primary tracking-widest uppercase">
+            Project spots open this month
+          </span>
+        </span>
       </div>
     </div>
   );

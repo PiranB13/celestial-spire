@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import { StaggerContainer, RevealItem } from './ScrollReveal';
+import { RevealItem, StaggerContainer } from './ScrollReveal';
+import SectionHeading from './SectionHeading';
 
 const faqs = [
   {
@@ -29,28 +30,37 @@ const faqs = [
   },
 ];
 
-function FAQItem({ q, a }: { q: string; a: string }) {
+function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
   const [open, setOpen] = useState(false);
+  const panelId = `faq-panel-${index}`;
+  const buttonId = `faq-button-${index}`;
 
   return (
-    <div
-      className={`glass rounded-xl overflow-hidden transition-colors duration-300 ${
-        open ? 'border-primary/40' : 'border-border/50'
-      } border`}
-    >
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full px-6 py-5 flex items-center justify-between gap-4 text-left"
-      >
-        <span className="text-sm font-semibold text-foreground leading-snug">{q}</span>
-        <ChevronDown
-          className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
-        />
-      </button>
+    <div className={`glass rounded-xl overflow-hidden transition-colors duration-300 ${open ? 'border-primary/40' : ''}`}>
+      <h3>
+        <button
+          id={buttonId}
+          onClick={() => setOpen(!open)}
+          aria-expanded={open}
+          aria-controls={panelId}
+          className="w-full px-6 py-5 flex items-center justify-between gap-4 text-left"
+        >
+          <span className="text-sm sm:text-base font-semibold text-foreground leading-snug">{q}</span>
+          <ChevronDown
+            className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
+            aria-hidden="true"
+          />
+        </button>
+      </h3>
       <div
-        className={`overflow-hidden transition-all duration-400 ease-in-out ${open ? 'max-h-96' : 'max-h-0'}`}
+        id={panelId}
+        role="region"
+        aria-labelledby={buttonId}
+        className={`grid transition-all duration-300 ease-in-out ${open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
       >
-        <p className="px-6 pb-5 text-sm text-muted-foreground leading-relaxed">{a}</p>
+        <div className="overflow-hidden">
+          <p className="px-6 pb-5 text-sm sm:text-base text-muted-foreground leading-relaxed">{a}</p>
+        </div>
       </div>
     </div>
   );
@@ -58,32 +68,26 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQSection() {
   return (
-    <section id="faq" className="relative py-16 lg:py-24">
+    <section id="faq" aria-labelledby="faq-heading" className="relative py-20 lg:py-28">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <StaggerContainer className="text-center mb-12">
-          <RevealItem>
-            <span className="font-mono-tech text-xs text-primary tracking-widest uppercase">// FAQ</span>
-          </RevealItem>
-          <RevealItem>
-            <h2 className="text-3xl lg:text-5xl font-bold mt-4 mb-4">
-              Common <span className="text-gradient">Questions</span>
-            </h2>
-          </RevealItem>
-          <RevealItem>
-            <p className="text-muted-foreground max-w-xl mx-auto">
+        <SectionHeading
+          eyebrow="FAQ"
+          title={<span id="faq-heading">Web design questions, <span className="text-gradient">answered</span></span>}
+          description={
+            <>
               The stuff people actually ask before signing. Anything missing?{' '}
               <a href="#contact" className="text-primary hover:underline">Drop us a note.</a>
-            </p>
-          </RevealItem>
-        </StaggerContainer>
+            </>
+          }
+        />
 
-        <div className="max-w-3xl mx-auto flex flex-col gap-3">
-          {faqs.map((item) => (
+        <StaggerContainer className="max-w-3xl mx-auto flex flex-col gap-3" staggerDelay={0.06}>
+          {faqs.map((item, i) => (
             <RevealItem key={item.q}>
-              <FAQItem q={item.q} a={item.a} />
+              <FAQItem q={item.q} a={item.a} index={i} />
             </RevealItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
