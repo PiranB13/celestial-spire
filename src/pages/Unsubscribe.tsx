@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { supabase } from '@/integrations/supabase/client';
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string;
 const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string;
@@ -33,6 +32,8 @@ export default function Unsubscribe() {
     if (!token) return;
     setSubmitting(true);
     try {
+      // Loaded on demand so the Supabase client stays out of the main bundle
+      const { supabase } = await import('@/integrations/supabase/client');
       const { data, error } = await supabase.functions.invoke('handle-email-unsubscribe', { body: { token } });
       if (error) throw error;
       if (data?.success) setState('success');

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { ArrowRight, Clock, PoundSterling, MessageSquare, LifeBuoy } from 'lucide-react';
 import heroBrain from '@/assets/hero-brain.webp';
 
@@ -22,13 +21,8 @@ export default function HeroSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 lg:pt-40 lg:pb-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          {/* Copy */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-center lg:text-left"
-          >
+          {/* Copy — CSS animation so prerendered HTML paints before JS loads */}
+          <div className="text-center lg:text-left animate-fade-up">
             <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs font-mono-tech text-primary mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" aria-hidden="true" />
               Accepting new projects — limited spots this month
@@ -62,14 +56,12 @@ export default function HeroSection() {
                 See our work
               </a>
             </div>
-          </motion.div>
+          </div>
 
           {/* Visual */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.94 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.15 }}
-            className="relative hidden lg:flex items-center justify-center"
+          <div
+            className="relative hidden lg:flex items-center justify-center animate-fade-up"
+            style={{ animationDelay: '0.15s', animationFillMode: 'both' }}
             aria-hidden="true"
           >
             <div className="relative w-[380px] h-[380px]">
@@ -84,20 +76,17 @@ export default function HeroSection() {
                 alt=""
                 width={640}
                 height={640}
-                fetchPriority="high"
                 className="absolute inset-0 w-full h-full object-contain"
                 style={{ filter: 'drop-shadow(0 0 40px hsl(var(--primary) / 0.35))' }}
               />
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Stats */}
-        <motion.dl
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-16 lg:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-px rounded-2xl overflow-hidden border border-border/60 bg-border/60"
+        <dl
+          className="mt-16 lg:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-px rounded-2xl overflow-hidden border border-border/60 bg-border/60 animate-fade-up"
+          style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
         >
           {stats.map((stat) => (
             <div key={stat.label} className="bg-card/70 backdrop-blur-sm px-6 py-5 text-center lg:text-left flex flex-col-reverse gap-1.5">
@@ -110,7 +99,7 @@ export default function HeroSection() {
               </dd>
             </div>
           ))}
-        </motion.dl>
+        </dl>
       </div>
     </section>
   );

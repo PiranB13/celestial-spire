@@ -23,10 +23,7 @@ export default function Navbar() {
   return (
     <>
       <a href="#main" className="skip-link">Skip to content</a>
-      <motion.header
-        initial={{ y: -80 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
+      <header
         className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${
           scrolled ? 'glass-strong shadow-lg shadow-primary/5' : 'bg-transparent'
         }`}
@@ -104,7 +101,7 @@ export default function Navbar() {
             </div>
           </motion.div>
         )}
-      </motion.header>
+      </header>
     </>
   );
 }

@@ -96,6 +96,12 @@ const Index = () => {
         />
         <meta property="og:url" content="https://aiwebsolution.lovable.app/" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="AI Web Solutions" />
+        <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b1084178-bfd6-4c77-ac5f-79df63d7217e/id-preview-04f93c32--2362c53b-2f6e-4ce0-a599-4b0aa2150535.lovable.app-1780690349413.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Web Solutions — Expert Web Design & Development, Delivered in Days" />
+        <meta name="twitter:description" content="Custom websites, redesigns, e-commerce and portals for UK small businesses. Fixed prices from £300, average delivery in 11 days." />
+        <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b1084178-bfd6-4c77-ac5f-79df63d7217e/id-preview-04f93c32--2362c53b-2f6e-4ce0-a599-4b0aa2150535.lovable.app-1780690349413.png" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         {serviceSchemas.map((s, i) => (
           <script key={i} type="application/ld+json">{JSON.stringify(s)}</script>
