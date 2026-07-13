@@ -1,4 +1,4 @@
-import logoAsset from '@/assets/aiweb-logo.jpg.asset.json';
+import logoAsset from '@/assets/aiweb-logo-transparent.png';
 
 interface LogoProps {
   size?: number;
