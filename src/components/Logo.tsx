@@ -23,7 +23,7 @@ const Logo = ({
           alt="AI Web Solutions — Smarter websites, expert craftsmanship"
           height={size}
           style={{ height: size, width: 'auto' }}
-          className="object-contain relative z-10"
+          className="object-contain relative z-10 brightness-0 invert"
         />
       </span>
     </a>
