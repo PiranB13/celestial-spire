@@ -1,4 +1,4 @@
-import logoAsset from '@/assets/aiweb-logo.jpg.asset.json';
+import logoAsset from '@/assets/aiweb-logo-transparent.png';
 
 interface LogoProps {
   size?: number;
@@ -18,7 +18,7 @@ const Logo = ({
       aria-label="AI Web Solutions — home"
     >
       <img
-        src={logoAsset.url}
+        src={logoAsset}
         alt="AI Web Solutions — Smarter websites, expert craftsmanship"
         height={size}
         style={{ height: size, width: 'auto' }}
