@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import Logo from '@/components/Logo';
 
 const navLinks = [
   { label: 'Services', href: '#services' },
@@ -30,14 +31,7 @@ export default function Navbar() {
       >
         <nav aria-label="Main navigation" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            <a href="/" className="flex items-center gap-2.5 group" aria-label="AI Web Solutions — home">
-              <span className="w-8 h-8 rounded-lg bg-primary/15 border border-primary/40 flex items-center justify-center group-hover:glow-border transition-shadow duration-300">
-                <span className="text-primary font-bold text-sm">AI</span>
-              </span>
-              <span className="font-semibold text-foreground text-sm lg:text-base">
-                AI Web Solutions
-              </span>
-            </a>
+            <Logo />
 
             <div className="hidden md:flex items-center gap-1">
               {navLinks.map((link) => (
