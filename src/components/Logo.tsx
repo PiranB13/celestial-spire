@@ -30,10 +30,11 @@ const Logo = ({
       >
         {hasLogo ? (
           <img
-            src={`https://img.logo.dev/${domain}?token=${publishableKey}&size=${size * 2}&theme=dark`}
+            src={`https://img.logo.dev/${domain}?token=${publishableKey}&size=${size * 2}&theme=dark&fallback=monogram`}
             alt="AI Web Solutions logo"
             width={size}
             height={size}
+            referrerPolicy="origin"
             className="w-full h-full object-contain p-1"
             onError={() => setError(true)}
           />
