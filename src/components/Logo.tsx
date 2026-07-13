@@ -18,7 +18,7 @@ const Logo = ({
       aria-label="AI Web Solutions — home"
     >
       <img
-        src={logoAsset.url}
+        src={logoAsset}
         alt="AI Web Solutions — Smarter websites, expert craftsmanship"
         height={size}
         style={{ height: size, width: 'auto' }}
