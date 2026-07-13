@@ -24,7 +24,7 @@ const Logo = ({
           height={size}
           style={size ? { height: size, width: 'auto' } : undefined}
           className={`object-contain relative z-10 brightness-0 invert w-auto ${
-            size ? '' : 'h-9 sm:h-10 md:h-11 lg:h-12'
+            size ? '' : 'h-[180px] sm:h-[200px] md:h-[220px] lg:h-[240px]'
           }`}
         />
       </span>
