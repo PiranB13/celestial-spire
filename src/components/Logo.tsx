@@ -17,17 +17,15 @@ const Logo = ({
       className={`flex items-center group ${className}`}
       aria-label="AI Web Solutions — home"
     >
-      <span className="relative flex items-center justify-center p-1 sm:p-1.5 rounded-xl bg-card/80 shadow-lg shadow-primary/10 transition-all duration-300 group-hover:shadow-primary/20">
-        <img
-          src={logoAsset}
-          alt="AI Web Solutions — Smarter websites, expert craftsmanship"
-          height={size}
-          style={size ? { height: size, width: 'auto' } : undefined}
-          className={`object-contain relative z-10 brightness-0 invert w-auto ${
-            size ? '' : 'h-14 sm:h-20 md:h-24 lg:h-32 xl:h-[200px]'
-          }`}
-        />
-      </span>
+      <img
+        src={logoAsset}
+        alt="AI Web Solutions — Smarter websites, expert craftsmanship"
+        height={size}
+        style={size ? { height: size, width: 'auto' } : undefined}
+        className={`object-contain brightness-0 invert w-auto ${
+          size ? '' : 'h-16 sm:h-24 md:h-28 lg:h-36 xl:h-[220px]'
+        }`}
+      />
     </a>
   );
 };
