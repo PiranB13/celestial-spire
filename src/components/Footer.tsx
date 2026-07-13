@@ -1,4 +1,5 @@
 import { Mail, Phone } from 'lucide-react';
+import Logo from '@/components/Logo';
 
 const serviceLinks = [
   { label: 'Website design & creation', href: '/#services' },
@@ -21,12 +22,9 @@ const Footer = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         {/* Brand */}
         <div className="lg:col-span-1">
-          <a href="/" className="flex items-center gap-2.5 mb-4" aria-label="AI Web Solutions — home">
-            <span className="w-8 h-8 rounded-lg bg-primary/15 border border-primary/40 flex items-center justify-center">
-              <span className="text-primary font-bold text-sm">AI</span>
-            </span>
-            <span className="font-semibold text-foreground">AI Web Solutions</span>
-          </a>
+          <div className="mb-4">
+            <Logo showText className="inline-flex" />
+          </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
             Expert web design and development for UK small businesses. Fixed
             prices, fast delivery, hand-finished quality.
