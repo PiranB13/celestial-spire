@@ -7,7 +7,7 @@ interface LogoProps {
 }
 
 const Logo = ({
-  size = 44,
+  size,
   className = '',
   showText = true,
 }: LogoProps) => {
@@ -17,13 +17,14 @@ const Logo = ({
       className={`flex items-center group ${className}`}
       aria-label="AI Web Solutions — home"
     >
-      <span className="relative flex items-center justify-center p-1.5 rounded-xl bg-card/80 shadow-lg shadow-primary/10 transition-all duration-300 group-hover:shadow-primary/20">
+      <span className="relative flex items-center justify-center p-1 sm:p-1.5 rounded-xl bg-card/80 shadow-lg shadow-primary/10 transition-all duration-300 group-hover:shadow-primary/20">
         <img
           src={logoAsset}
           alt="AI Web Solutions — Smarter websites, expert craftsmanship"
           height={size}
-          style={{ height: size, width: 'auto' }}
-          className="object-contain relative z-10 brightness-0 invert"
+          className={`object-contain relative z-10 brightness-0 invert w-auto ${
+            size ? `h-[${size}px]` : 'h-9 sm:h-10 md:h-11 lg:h-12'
+          }`}
         />
       </span>
     </a>
