@@ -22,8 +22,9 @@ const Logo = ({
           src={logoAsset}
           alt="AI Web Solutions — Smarter websites, expert craftsmanship"
           height={size}
+          style={size ? { height: size, width: 'auto' } : undefined}
           className={`object-contain relative z-10 brightness-0 invert w-auto ${
-            size ? `h-[${size}px]` : 'h-9 sm:h-10 md:h-11 lg:h-12'
+            size ? '' : 'h-9 sm:h-10 md:h-11 lg:h-12'
           }`}
         />
       </span>
