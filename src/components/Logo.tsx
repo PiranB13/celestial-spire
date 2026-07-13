@@ -1,4 +1,4 @@
-import logoAsset from '@/assets/ai-web-solutions-icon.png.asset.json';
+import logoAsset from '@/assets/aiweb-logo.jpg.asset.json';
 
 interface LogoProps {
   size?: number;
@@ -7,33 +7,23 @@ interface LogoProps {
 }
 
 const Logo = ({
-  size = 32,
+  size = 40,
   className = '',
   showText = true,
 }: LogoProps) => {
   return (
     <a
       href="/"
-      className={`flex items-center gap-2.5 group ${className}`}
+      className={`flex items-center group ${className}`}
       aria-label="AI Web Solutions — home"
     >
-      <span
-        className="rounded-lg bg-primary/15 border border-primary/40 flex items-center justify-center overflow-hidden group-hover:glow-border transition-shadow duration-300"
-        style={{ width: size, height: size }}
-      >
-        <img
-          src={logoAsset.url}
-          alt="AI Web Solutions logo"
-          width={size}
-          height={size}
-          className="w-full h-full object-contain p-1"
-        />
-      </span>
-      {showText && (
-        <span className="font-semibold text-foreground text-sm lg:text-base">
-          AI Web Solutions
-        </span>
-      )}
+      <img
+        src={logoAsset.url}
+        alt="AI Web Solutions — Smarter websites, expert craftsmanship"
+        height={size}
+        style={{ height: size, width: 'auto' }}
+        className="object-contain transition-opacity duration-300 group-hover:opacity-90"
+      />
     </a>
   );
 };
