@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "sdk_version": "0.22.0",
+  "path": "/functions/v1/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "ai-web-solution-mcp",
+      "version": "0.1.0",
+      "title": "AI Web Solution"
+    },
+    "tools": [
+      {
+        "name": "get_services",
+        "title": "Get services",
+        "description": "List the web design, SEO, and web application services offered by AI Web Solution.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_pricing",
+        "title": "Get pricing tiers",
+        "description": "List AI Web Solution's pricing tiers with starting prices in GBP. Prices are starting points; final quotes depend on scope.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_process",
+        "title": "Get delivery process",
+        "description": "Return the 4-step delivery process AI Web Solution uses for every project.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "submit_contact_enquiry",
+        "title": "Submit contact enquiry",
+        "description": "Send a project enquiry to AI Web Solution. The team responds within 24 hours with a quote and starting plan.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "idempotentHint": false,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100,
+              "description": "Full name of the person enquiring."
+            },
+            "email": {
+              "type": "string",
+              "maxLength": 255,
+              "format": "email",
+              "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_'+\\-\\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$",
+              "description": "Reply-to email address."
+            },
+            "industry": {
+              "description": "Industry or type of business.",
+              "type": "string",
+              "maxLength": 100
+            },
+            "budget": {
+              "description": "Budget tier: 300plus (£300+ Basic), 500plus (£500+ Pro), 1000plus (£1,000+ Expert), 2000plus (£2,000+ Full Brand).",
+              "type": "string",
+              "enum": [
+                "300plus",
+                "500plus",
+                "1000plus",
+                "2000plus"
+              ]
+            },
+            "message": {
+              "description": "What you are building, timelines, and anything else that helps us quote.",
+              "type": "string",
+              "maxLength": 1000
+            }
+          },
+          "required": [
+            "name",
+            "email"
+          ]
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
