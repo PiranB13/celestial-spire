@@ -118,9 +118,9 @@ export default function ContactSection() {
                   className={`${inputClasses} appearance-none`}
                 >
                   <option value="">Select a range</option>
-                  <option value="300-500">£300 – £500 (Basic)</option>
-                  <option value="500-1000">£500 – £1,000 (Pro)</option>
-                  <option value="1000-2000">£1,000 – £2,000 (Expert)</option>
+                  <option value="300plus">£300+ (Basic)</option>
+                  <option value="500plus">£500+ (Pro)</option>
+                  <option value="1000plus">£1,000+ (Expert)</option>
                   <option value="2000plus">£2,000+ (Full Brand)</option>
                 </select>
               </div>
