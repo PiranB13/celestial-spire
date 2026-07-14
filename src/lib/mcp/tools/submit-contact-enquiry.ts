@@ -23,8 +23,9 @@ export default defineTool({
   },
   annotations: { readOnlyHint: false, destructiveHint: false, idempotentHint: false, openWorldHint: true },
   handler: async (input) => {
-    const supabaseUrl = Deno.env.get("SUPABASE_URL");
-    const anonKey = Deno.env.get("SUPABASE_ANON_KEY") ?? Deno.env.get("SUPABASE_PUBLISHABLE_KEY");
+    const env = (globalThis as { Deno?: { env: { get(key: string): string | undefined } } }).Deno?.env;
+    const supabaseUrl = env?.get("SUPABASE_URL");
+    const anonKey = env?.get("SUPABASE_ANON_KEY") ?? env?.get("SUPABASE_PUBLISHABLE_KEY");
     if (!supabaseUrl || !anonKey) {
       return {
         content: [{ type: "text", text: "Contact form is not available right now." }],
