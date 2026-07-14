@@ -1,5 +1,8 @@
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
+import * as React from "npm:react@18.3.1";
+import { renderAsync } from "npm:@react-email/components@0.0.22";
+import { createClient } from "npm:@supabase/supabase-js@2";
 import { z } from "https://esm.sh/zod@3.23.8";
+import { template as contactNotification } from "../_shared/transactional-email-templates/contact-notification.tsx";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -7,6 +10,9 @@ const corsHeaders = {
 };
 
 const RECIPIENT = "piranbeumkes13@gmail.com";
+const SITE_NAME = "aiwebsolution";
+const SENDER_DOMAIN = "notify.contact.aiwebsolution.co.uk";
+const FROM_DOMAIN = "contact.aiwebsolution.co.uk";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1).max(100),
@@ -48,31 +54,61 @@ Deno.serve(async (req) => {
     });
     if (insertErr) console.error("Insert error:", insertErr);
 
-    // Forward via Lovable transactional email if available.
-    // send-transactional-email requires a service_role JWT — pass it explicitly
-    // because supabase.functions.invoke does not forward the client's key.
+    // Render and enqueue the notification email directly (same pattern as auth-email-hook).
     try {
-      const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-      const { error: emailErr } = await supabase.functions.invoke("send-transactional-email", {
-        headers: {
-          Authorization: `Bearer ${serviceKey}`,
-        },
-        body: {
-          templateName: "contact-notification",
-          recipientEmail: RECIPIENT,
-          idempotencyKey: `contact-${crypto.randomUUID()}`,
-          templateData: {
-            name: body.name,
-            email: body.email,
-            industry: body.industry || "Not provided",
-            budget: body.budget || "Not provided",
-            message: body.message || "No message",
-          },
+      const templateData = {
+        name: body.name,
+        email: body.email,
+        industry: body.industry || "Not provided",
+        budget: body.budget || "Not provided",
+        message: body.message || "No message",
+      };
+
+      const html = await renderAsync(React.createElement(contactNotification.component, templateData));
+      const text = await renderAsync(React.createElement(contactNotification.component, templateData), { plainText: true });
+      const subject =
+        typeof contactNotification.subject === "function"
+          ? contactNotification.subject(templateData)
+          : contactNotification.subject;
+
+      const messageId = crypto.randomUUID();
+
+      await supabase.from("email_send_log").insert({
+        message_id: messageId,
+        template_name: "contact-notification",
+        recipient_email: RECIPIENT,
+        status: "pending",
+      });
+
+      const { error: enqueueError } = await supabase.rpc("enqueue_email", {
+        queue_name: "transactional_emails",
+        payload: {
+          message_id: messageId,
+          to: RECIPIENT,
+          from: `${SITE_NAME} <noreply@${FROM_DOMAIN}>`,
+          sender_domain: SENDER_DOMAIN,
+          subject,
+          html,
+          text,
+          purpose: "transactional",
+          label: "contact-notification",
+          idempotency_key: `contact-${messageId}`,
+          queued_at: new Date().toISOString(),
         },
       });
-      if (emailErr) console.error("Email forward error:", emailErr);
+
+      if (enqueueError) {
+        console.error("Enqueue error:", enqueueError);
+        await supabase.from("email_send_log").insert({
+          message_id: messageId,
+          template_name: "contact-notification",
+          recipient_email: RECIPIENT,
+          status: "failed",
+          error_message: "Failed to enqueue notification email",
+        });
+      }
     } catch (e) {
-      console.error("Email infra not ready:", e);
+      console.error("Email render/enqueue failed:", e);
     }
 
     return new Response(JSON.stringify({ ok: true }), { headers: { ...corsHeaders, "Content-Type": "application/json" } });
