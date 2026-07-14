@@ -13,5 +13,6 @@ Allow: /
 User-agent: *
 Allow: /
 Disallow: /unsubscribe
+Disallow: /admin
 
-Sitemap: https://aiwebsolution.lovable.app/sitemap.xml
+Sitemap: https://aiwebsolution.co.uk/sitemap.xml
