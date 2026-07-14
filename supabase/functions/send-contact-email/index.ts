@@ -73,6 +73,31 @@ Deno.serve(async (req) => {
 
       const messageId = crypto.randomUUID();
 
+      // Get or create unsubscribe token for the recipient (required by email API).
+      const normalizedEmail = RECIPIENT.toLowerCase();
+      let unsubscribeToken: string | null = null;
+      const { data: existingToken } = await supabase
+        .from("email_unsubscribe_tokens")
+        .select("token")
+        .eq("email", normalizedEmail)
+        .maybeSingle();
+      if (existingToken?.token) {
+        unsubscribeToken = existingToken.token;
+      } else {
+        const bytes = new Uint8Array(32);
+        crypto.getRandomValues(bytes);
+        unsubscribeToken = Array.from(bytes).map((b) => b.toString(16).padStart(2, "0")).join("");
+        await supabase
+          .from("email_unsubscribe_tokens")
+          .upsert({ token: unsubscribeToken, email: normalizedEmail }, { onConflict: "email", ignoreDuplicates: true });
+        const { data: stored } = await supabase
+          .from("email_unsubscribe_tokens")
+          .select("token")
+          .eq("email", normalizedEmail)
+          .maybeSingle();
+        if (stored?.token) unsubscribeToken = stored.token;
+      }
+
       await supabase.from("email_send_log").insert({
         message_id: messageId,
         template_name: "contact-notification",
@@ -93,6 +118,7 @@ Deno.serve(async (req) => {
           purpose: "transactional",
           label: "contact-notification",
           idempotency_key: `contact-${messageId}`,
+          unsubscribe_token: unsubscribeToken,
           queued_at: new Date().toISOString(),
         },
       });
