@@ -48,9 +48,15 @@ Deno.serve(async (req) => {
     });
     if (insertErr) console.error("Insert error:", insertErr);
 
-    // Forward via Lovable transactional email if available
+    // Forward via Lovable transactional email if available.
+    // send-transactional-email requires a service_role JWT — pass it explicitly
+    // because supabase.functions.invoke does not forward the client's key.
     try {
+      const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
       const { error: emailErr } = await supabase.functions.invoke("send-transactional-email", {
+        headers: {
+          Authorization: `Bearer ${serviceKey}`,
+        },
         body: {
           templateName: "contact-notification",
           recipientEmail: RECIPIENT,
