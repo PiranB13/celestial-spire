@@ -4,7 +4,8 @@ import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
 import "./index.css";
 
-const container = document.getElementById("root")!;
+const container = document.getElementById("root");
+if (!container) throw new Error("Application root is missing");
 const app = (
   <HelmetProvider>
     <BrowserRouter>
@@ -15,7 +16,7 @@ const app = (
 
 // Prerendered pages ship with HTML in #root — hydrate it. Anything served
 // from the empty SPA shell (e.g. dev server) renders from scratch.
-if (container.hasChildNodes()) {
+if (container.children.length > 0) {
   hydrateRoot(container, app);
 } else {
   createRoot(container).render(app);

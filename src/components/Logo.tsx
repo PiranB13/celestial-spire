@@ -1,4 +1,4 @@
-import logoAsset from '@/assets/aiweb-logo-transparent.png';
+import { Globe2 } from 'lucide-react';
 
 interface LogoProps {
   size?: number;
@@ -6,28 +6,11 @@ interface LogoProps {
   showText?: boolean;
 }
 
-const Logo = ({
-  size,
-  className = '',
-  showText = true,
-}: LogoProps) => {
-  return (
-    <a
-      href="/"
-      className={`flex items-center group ${className}`}
-      aria-label="AI Web Solutions — home"
-    >
-      <img
-        src={logoAsset}
-        alt="AI Web Solutions — Smarter websites, expert craftsmanship"
-        height={size}
-        style={size ? { height: size, width: 'auto' } : undefined}
-        className={`object-contain brightness-0 invert w-auto ${
-          size ? '' : 'h-16 sm:h-24 md:h-28 lg:h-36 xl:h-[220px]'
-        }`}
-      />
-    </a>
-  );
-};
+const Logo = ({ className = '', showText = true }: LogoProps) => (
+  <a href="/" className={`inline-flex items-center gap-3 shrink-0 text-foreground ${className}`} aria-label="Web Solutions — home">
+    <Globe2 className="w-8 h-8 sm:w-9 sm:h-9 text-primary" strokeWidth={1.5} aria-hidden="true" />
+    {showText && <span className="text-lg sm:text-xl font-semibold leading-tight">Web<span className="text-primary"> Solutions</span></span>}
+  </a>
+);
 
 export default Logo;

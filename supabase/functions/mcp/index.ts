@@ -42,7 +42,7 @@ var services = [
 var get_services_default = defineTool({
   name: "get_services",
   title: "Get services",
-  description: "List the web design, SEO, and web application services offered by AI Web Solution.",
+  description: "List the web design, SEO, and web application services offered by Web Solutions.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
@@ -59,7 +59,7 @@ var tiers = [
     startingPriceGBP: 300,
     description: "A single page, built to convert. Good for freelancers, product launches, or a small business that does not need a full site yet.",
     features: [
-      "Custom design, hand-reviewed",
+      "Custom design, professionally developed",
       "Works on phones and laptops",
       "SEO and meta tags set up",
       "Contact form that actually sends",
@@ -114,7 +114,7 @@ var tiers = [
 var get_pricing_default = defineTool2({
   name: "get_pricing",
   title: "Get pricing tiers",
-  description: "List AI Web Solution's pricing tiers with starting prices in GBP. Prices are starting points; final quotes depend on scope.",
+  description: "List Web Solutions' pricing tiers with starting prices in GBP. Prices are starting points; final quotes depend on scope.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
@@ -134,7 +134,7 @@ var steps = [
 var get_process_default = defineTool3({
   name: "get_process",
   title: "Get delivery process",
-  description: "Return the 4-step delivery process AI Web Solution uses for every project.",
+  description: "Return the 4-step delivery process Web Solutions uses for every project.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
@@ -149,7 +149,7 @@ import { z } from "npm:zod@^4.4.3";
 var submit_contact_enquiry_default = defineTool4({
   name: "submit_contact_enquiry",
   title: "Submit contact enquiry",
-  description: "Send a project enquiry to AI Web Solution. The team responds within 24 hours with a quote and starting plan.",
+  description: "Send a project enquiry to Web Solutions. The team responds within 24 hours with a quote and starting plan.",
   inputSchema: {
     name: z.string().trim().min(1).max(100).describe("Full name of the person enquiring."),
     email: z.string().trim().email().max(255).describe("Reply-to email address."),
@@ -206,9 +206,9 @@ var submit_contact_enquiry_default = defineTool4({
 // src/lib/mcp/index.ts
 var mcp_default = defineMcp({
   name: "ai-web-solution-mcp",
-  title: "AI Web Solution",
+  title: "Web Solutions",
   version: "0.1.0",
-  instructions: "Public MCP server for AI Web Solution (aiwebsolution.co.uk). Use `get_services`, `get_pricing`, and `get_process` to describe what the studio offers, and `submit_contact_enquiry` to send a project enquiry that the team will respond to within 24 hours.",
+  instructions: "Public MCP server for Web Solutions (aiwebsolution.co.uk). Use `get_services`, `get_pricing`, and `get_process` to describe what the web design studio offers, and `submit_contact_enquiry` to send a project enquiry that the team will respond to within 24 hours.",
   tools: [get_services_default, get_pricing_default, get_process_default, submit_contact_enquiry_default]
 });
 

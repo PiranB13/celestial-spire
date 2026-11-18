@@ -26,8 +26,8 @@ const Footer = () => (
             <Logo showText className="inline-flex" />
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Expert web design and development for UK small businesses. Fixed
-            prices, fast delivery, hand-finished quality.
+            Expert web design and development for UK small businesses. Custom
+            design, clear starting prices, and personal service.
           </p>
         </div>
 
@@ -69,7 +69,7 @@ const Footer = () => (
                 className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors break-all"
               >
                 <Mail className="w-4 h-4 shrink-0 text-primary" aria-hidden="true" />
-                PiranBeumkes@AIWebSolution.co.uk
+                Email our team
               </a>
             </li>
             <li>
@@ -95,7 +95,7 @@ const Footer = () => (
 
       <div className="border-t border-border/50 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} AI Web Solutions. All rights reserved.
+          © {new Date().getFullYear()} Web Solutions. All rights reserved.
         </p>
         <p className="text-xs text-muted-foreground font-mono-tech">Crafted with care in the UK</p>
       </div>

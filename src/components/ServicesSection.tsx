@@ -30,7 +30,7 @@ export default function ServicesSection() {
         <SectionHeading
           eyebrow="Services"
           title={<span id="services-heading">Web design &amp; development <span className="text-gradient">services</span></span>}
-          description="Expert craftsmanship, delivered in a fraction of the time. You get a polished website for less money and in less time than a traditional agency takes."
+          description="Custom websites designed around your business, with attention to detail, reliable development, and support from start to finish."
         />
 
         <StaggerContainer className="grid md:grid-cols-3 gap-6 lg:gap-8">

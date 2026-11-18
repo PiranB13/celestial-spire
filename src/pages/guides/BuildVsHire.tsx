@@ -14,8 +14,8 @@ const articleSchema = {
     'A practical comparison of DIY website builders and hiring a professional web design agency, focused on time to market, total cost, and long-term quality.',
   datePublished: PUBLISHED_AT,
   dateModified: PUBLISHED_AT,
-  author: { '@type': 'Organization', name: 'AI Web Solutions' },
-  publisher: { '@type': 'Organization', name: 'AI Web Solutions' },
+  author: { '@type': 'Organization', name: 'Web Solutions' },
+  publisher: { '@type': 'Organization', name: 'Web Solutions' },
   mainEntityOfPage: URL,
 };
 
@@ -94,7 +94,7 @@ export default function BuildVsHire() {
               DIY builders make sense for hobby sites and very early experiments where the design
               doesn't matter yet. For anything that represents a business, hiring a professional team
               is almost always cheaper once you count your own time — and the gap has shrunk
-              dramatically. Modern agencies using a proper toolchain now ship expert-grade websites in
+              dramatically. Experienced web design teams deliver custom websites in
               roughly the same window a DIY build takes a non-designer, with results that actually
               look the part. Our own average lead time is around <strong className="text-foreground">11 days</strong>.
             </p>
@@ -118,13 +118,13 @@ export default function BuildVsHire() {
             </div>
             <div className="glass rounded-2xl border border-primary/40 p-6 glow-static">
               <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-primary" /> Professional agency (modern)
+                <Sparkles className="w-4 h-4 text-primary" /> Professional agency
               </h3>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <Row good={true}>Around 11 days from kickoff to launch on a typical build</Row>
                 <Row good={true}>Custom design tuned to your brand and audience</Row>
-                <Row good={true}>Fixed starting price agreed in writing — no surprise invoices</Row>
-                <Row good={true}>Hand-reviewed by a person before it ships, plus post-launch support</Row>
+                <Row good={true}>Project quote agreed in writing — no surprise invoices</Row>
+                <Row good={true}>Professionally designed and tested before launch, plus post-launch support</Row>
                 <Row good={false}>Higher upfront cost than a DIY subscription's first month</Row>
               </ul>
             </div>
@@ -149,7 +149,7 @@ export default function BuildVsHire() {
               hidden invoice no one talks about.
             </p>
             <p>
-              A professional agency using a modern toolchain compresses that window dramatically.
+              A professional agency manages the design and development so you can focus on your business.
               We launch most builds in about <strong className="text-foreground">11 days</strong>,
               and you spend a handful of hours on it — kickoff, a feedback round, sign-off. Your
               time goes back into the business.
@@ -184,7 +184,7 @@ export default function BuildVsHire() {
               Ready for an expert site in around 11 days?
             </h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-              Fixed starting prices, hand-reviewed by a person before it ships, no surprise
+              Clear starting prices, professionally designed and tested before launch, no surprise
               invoices at the end.
             </p>
             <a

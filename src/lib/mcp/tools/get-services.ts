@@ -40,7 +40,7 @@ const services = [
 export default defineTool({
   name: "get_services",
   title: "Get services",
-  description: "List the web design, SEO, and web application services offered by AI Web Solution.",
+  description: "List the web design, SEO, and web application services offered by Web Solutions.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({

@@ -49,12 +49,12 @@ export default function Unsubscribe() {
   return (
     <main className="min-h-screen flex items-center justify-center px-4 bg-background">
       <Helmet>
-        <title>Unsubscribe — AI Web Solutions</title>
-        <meta name="description" content="Unsubscribe from AI Web Solutions emails." />
+        <title>Unsubscribe — Web Solutions</title>
+        <meta name="description" content="Unsubscribe from Web Solutions emails." />
         <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href="https://aiwebsolution.lovable.app/unsubscribe" />
-        <meta property="og:title" content="Unsubscribe — AI Web Solutions" />
-        <meta property="og:description" content="Unsubscribe from AI Web Solutions emails." />
+        <meta property="og:title" content="Unsubscribe — Web Solutions" />
+        <meta property="og:description" content="Unsubscribe from Web Solutions emails." />
         <meta property="og:url" content="https://aiwebsolution.lovable.app/unsubscribe" />
       </Helmet>
       <div className="glass rounded-2xl p-8 max-w-md w-full border border-border/50 text-center">

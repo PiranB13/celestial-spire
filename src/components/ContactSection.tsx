@@ -170,7 +170,7 @@ export default function ContactSection() {
                     <span className="w-10 h-10 shrink-0 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <Mail className="w-4 h-4 text-primary" aria-hidden="true" />
                     </span>
-                    PiranBeumkes@AIWebSolution.co.uk
+                    Email our team
                   </a>
                   <a
                     href="tel:+447435517255"

@@ -9,7 +9,7 @@ const tiers = [
     price: '300',
     description: 'A single page, built to convert. Good for freelancers, product launches, or a small business that does not need a full site yet.',
     features: [
-      'Custom design, hand-reviewed',
+      'Custom design, professionally developed',
       'Works on phones and laptops',
       'SEO and meta tags set up',
       'Contact form that actually sends',

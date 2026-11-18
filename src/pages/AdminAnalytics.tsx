@@ -154,7 +154,7 @@ export default function AdminAnalytics() {
   if (!authed) {
     return (
       <div className="min-h-dvh flex items-center justify-center bg-background px-4">
-        <Helmet><title>Admin · AI Web Solution</title><meta name="robots" content="noindex,nofollow" /></Helmet>
+        <Helmet><title>Admin · Web Solutions</title><meta name="robots" content="noindex,nofollow" /></Helmet>
         <form onSubmit={login} className="w-full max-w-sm space-y-4 rounded-xl border border-border/60 bg-card/40 p-6 backdrop-blur">
           <h1 className="text-xl font-semibold">Admin sign in</h1>
           <p className="text-sm text-muted-foreground">Enter the admin password to view analytics.</p>
@@ -177,7 +177,7 @@ export default function AdminAnalytics() {
 
   return (
     <div className="min-h-dvh bg-background text-foreground">
-      <Helmet><title>Admin analytics · AI Web Solution</title><meta name="robots" content="noindex,nofollow" /></Helmet>
+      <Helmet><title>Admin analytics · Web Solutions</title><meta name="robots" content="noindex,nofollow" /></Helmet>
       <div className="mx-auto max-w-6xl px-4 py-10 space-y-10">
         <header className="flex items-center justify-between">
           <div>

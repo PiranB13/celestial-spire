@@ -1,4 +1,4 @@
-import { Lightbulb, Cpu, Wrench, Rocket } from 'lucide-react';
+import { Lightbulb, PenTool, Wrench, Rocket } from 'lucide-react';
 import { StaggerContainer, RevealItem } from './ScrollReveal';
 import SectionHeading from './SectionHeading';
 
@@ -9,9 +9,9 @@ const steps = [
     description: 'A free 30-minute call. You walk us through the business, the goal, and who you are trying to reach. We come back the next day with a written scope and a fixed quote.',
   },
   {
-    icon: Cpu,
+    icon: PenTool,
     title: 'Design & Build',
-    description: 'We draft designs, shape the first pass of copy, and assemble the site using a modern toolchain that compresses weeks of studio work into days. You see progress every step of the way.',
+    description: 'We design around your brand, write clear copy, and develop a website tailored to your business. You review the direction and see progress every step of the way.',
   },
   {
     icon: Wrench,
@@ -33,7 +33,7 @@ export default function ProcessSection() {
         <SectionHeading
           eyebrow="Process"
           title={<span id="process-heading">Our web design <span className="text-gradient">process</span></span>}
-          description="Four steps from first call to launch day, in a fraction of the usual time — without cutting corners on quality."
+          description="A clear, collaborative process from your first call to launch day, with quality at every step."
         />
 
         <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">

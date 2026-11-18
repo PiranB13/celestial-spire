@@ -8,7 +8,7 @@ const tiers = [
     description:
       "A single page, built to convert. Good for freelancers, product launches, or a small business that does not need a full site yet.",
     features: [
-      "Custom design, hand-reviewed",
+      "Custom design, professionally developed",
       "Works on phones and laptops",
       "SEO and meta tags set up",
       "Contact form that actually sends",
@@ -68,7 +68,7 @@ export default defineTool({
   name: "get_pricing",
   title: "Get pricing tiers",
   description:
-    "List AI Web Solution's pricing tiers with starting prices in GBP. Prices are starting points; final quotes depend on scope.",
+    "List Web Solutions' pricing tiers with starting prices in GBP. Prices are starting points; final quotes depend on scope.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({

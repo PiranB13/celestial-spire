@@ -13,7 +13,7 @@ const NotFound = () => {
   return (
     <div className="relative flex min-h-dvh items-center justify-center bg-background text-foreground overflow-hidden">
       <Helmet>
-        <title>Page not found — AI Web Solutions</title>
+        <title>Page not found — Web Solutions</title>
         <meta name="robots" content="noindex" />
       </Helmet>
       <div className="absolute inset-0 bg-grid opacity-30" aria-hidden="true" />

@@ -10,7 +10,7 @@ const steps = [
 export default defineTool({
   name: "get_process",
   title: "Get delivery process",
-  description: "Return the 4-step delivery process AI Web Solution uses for every project.",
+  description: "Return the 4-step delivery process Web Solutions uses for every project.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({

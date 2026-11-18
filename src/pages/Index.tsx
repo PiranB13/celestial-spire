@@ -35,7 +35,7 @@ const faqSchema = {
       name: "How do you deliver so fast?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We use a modern toolchain that handles repetitive work, letting us focus on design, strategy, and quality. Every build is hand-reviewed and refined by a person before it ships.",
+        text: "A clear brief, an organised schedule, and focused design and development keep your project moving. We agree the scope up front, share progress regularly, and thoroughly test your website before launch.",
       },
     },
     {
@@ -75,7 +75,7 @@ const serviceSchemas = [
   "@type": "Service",
   name: s.name,
   description: s.description,
-  provider: { "@type": "Organization", name: "AI Web Solutions" },
+  provider: { "@type": "Organization", name: "Web Solutions" },
   offers: { "@type": "Offer", price: s.price, priceCurrency: "GBP" },
 }));
 
@@ -83,25 +83,23 @@ const Index = () => {
   return (
     <div className="min-h-dvh bg-background text-foreground overflow-x-clip">
       <Helmet>
-        <title>AI Web Solutions — Expert Web Design & Development, Delivered in Days</title>
+        <title>Web Solutions — Expert Web Design & Development, Delivered in Days</title>
         <meta
           name="description"
-          content="Professional web design and development for UK small businesses. Custom websites, redesigns, e-commerce and portals — fixed prices from £300, average delivery in 11 days."
+          content="Professional web design and development for UK small businesses. Custom websites, redesigns, e-commerce and portals — starting prices from £300, average delivery in 11 days."
         />
         <link rel="canonical" href="https://aiwebsolution.lovable.app/" />
-        <meta property="og:title" content="AI Web Solutions — Expert Web Design & Development, Delivered in Days" />
+        <meta property="og:title" content="Web Solutions — Expert Web Design & Development, Delivered in Days" />
         <meta
           property="og:description"
-          content="Custom websites, redesigns, e-commerce and portals for UK small businesses. Fixed prices from £300, average delivery in 11 days."
+          content="Custom websites, redesigns, e-commerce and portals for UK small businesses. Starting prices from £300, average delivery in 11 days."
         />
         <meta property="og:url" content="https://aiwebsolution.lovable.app/" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="AI Web Solutions" />
-        <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b1084178-bfd6-4c77-ac5f-79df63d7217e/id-preview-04f93c32--2362c53b-2f6e-4ce0-a599-4b0aa2150535.lovable.app-1780690349413.png" />
+        <meta property="og:site_name" content="Web Solutions" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Web Solutions — Expert Web Design & Development, Delivered in Days" />
-        <meta name="twitter:description" content="Custom websites, redesigns, e-commerce and portals for UK small businesses. Fixed prices from £300, average delivery in 11 days." />
-        <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b1084178-bfd6-4c77-ac5f-79df63d7217e/id-preview-04f93c32--2362c53b-2f6e-4ce0-a599-4b0aa2150535.lovable.app-1780690349413.png" />
+        <meta name="twitter:title" content="Web Solutions — Expert Web Design & Development, Delivered in Days" />
+        <meta name="twitter:description" content="Custom websites, redesigns, e-commerce and portals for UK small businesses. Starting prices from £300, average delivery in 11 days." />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         {serviceSchemas.map((s, i) => (
           <script key={i} type="application/ld+json">{JSON.stringify(s)}</script>

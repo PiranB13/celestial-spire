@@ -5,7 +5,7 @@ export default defineTool({
   name: "submit_contact_enquiry",
   title: "Submit contact enquiry",
   description:
-    "Send a project enquiry to AI Web Solution. The team responds within 24 hours with a quote and starting plan.",
+    "Send a project enquiry to Web Solutions. The team responds within 24 hours with a quote and starting plan.",
   inputSchema: {
     name: z.string().trim().min(1).max(100).describe("Full name of the person enquiring."),
     email: z.string().trim().email().max(255).describe("Reply-to email address."),

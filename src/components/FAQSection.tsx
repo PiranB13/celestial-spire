@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: 'How do you deliver so fast?',
-    a: "We use a modern toolchain that handles a lot of the repetitive work, which lets us focus on design, strategy, and quality. Every build is hand-reviewed and refined by a person before it ships, so you get the speed of modern tools with the polish of a proper studio.",
+    a: "A clear brief, an organised schedule, and focused design and development keep your project moving. We agree the scope up front, share progress regularly, and thoroughly test your website before launch.",
   },
   {
     q: 'What is included in the price?',
