@@ -9,13 +9,13 @@
     "server": {
       "name": "ai-web-solution-mcp",
       "version": "0.1.0",
-      "title": "AI Web Solution"
+      "title": "Web Solutions"
     },
     "tools": [
       {
         "name": "get_services",
         "title": "Get services",
-        "description": "List the web design, SEO, and web application services offered by AI Web Solution.",
+        "description": "List the web design, SEO, and web application services offered by Web Solutions.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
@@ -31,7 +31,7 @@
       {
         "name": "get_pricing",
         "title": "Get pricing tiers",
-        "description": "List AI Web Solution's pricing tiers with starting prices in GBP. Prices are starting points; final quotes depend on scope.",
+        "description": "List Web Solutions' pricing tiers with starting prices in GBP. Prices are starting points; final quotes depend on scope.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
@@ -47,7 +47,7 @@
       {
         "name": "get_process",
         "title": "Get delivery process",
-        "description": "Return the 4-step delivery process AI Web Solution uses for every project.",
+        "description": "Return the 4-step delivery process Web Solutions uses for every project.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
@@ -63,7 +63,7 @@
       {
         "name": "submit_contact_enquiry",
         "title": "Submit contact enquiry",
-        "description": "Send a project enquiry to AI Web Solution. The team responds within 24 hours with a quote and starting plan.",
+        "description": "Send a project enquiry to Web Solutions. The team responds within 24 hours with a quote and starting plan.",
         "annotations": {
           "readOnlyHint": false,
           "destructiveHint": false,
